@@ -67,11 +67,11 @@ steps:
         issue: 4
         data:
           nextIssue: '5'
-          nextName: 'Info Card: Store Framework's call to action'
+          nextName: "Info Card: Store Framework's call to action"
       - type: createIssue
-        title: 'Info Card: Store Framework's call to action'
+        title: "Info Card: Store Framework's call to action"
         body: infocard.md
-  - title: 'Info Card: Store Framework's call to action'
+  - title: "Info Card: Store Framework's call to action"
     description: Defining a block's call to action on our homepage
     event: status
     link: '{{ repoUrl }}/issues/5'
