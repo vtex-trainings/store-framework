@@ -1,0 +1,444 @@
+title: Store Framework
+tagline: A brand new course on Learning Lab
+description: >-
+  Learning how to build a store using the Store Framework blocks language,
+  powered by VTEX IO.
+template:
+  repo: store-framework-template
+  name: store-framework-pt
+before:
+  - type: createIssue
+    title: Configurações básicas
+    body: setup.md
+steps:
+  - title: Configurações básicas
+    description: Pré-requisitos para desenvolver com o Store Framework
+    event: issues.closed
+    link: '{{ repoUrl }}/issues/1'
+    actions:
+      - type: respond
+        with: new-issue.md
+        issue: 1
+        data:
+          nextIssue: '2'
+          nextName: Store Framework 101
+      - type: createIssue
+        title: Store Framework 101
+        body: storeframework.md
+  - title: Store Framework 101
+    description: Definições rápidas e introdutórias sobre o Store Framework.
+    event: issues.closed
+    link: '{{ repoUrl }}/issues/2'
+    actions:
+      - type: respond
+        with: new-issue.md
+        issue: 2
+        data:
+          nextIssue: '3'
+          nextName: Funcionamento do curso
+      - type: createIssue
+        title: Funcionamento do curso
+        body: course.md
+  - title: Funcionamento do curso
+    description: Explicando como interagir com o curso.
+    event: issues.closed
+    link: '{{ repoUrl }}/issues/3'
+    actions:
+      - type: respond
+        with: new-issue.md
+        issue: 3
+        data:
+          nextIssue: '4'
+          nextName: 'Hello, World!'
+      - type: createIssue
+        title: 'Hello, World!'
+        body: helloworld.md
+  - title: 'Hello, World!'
+    description: Componha e referencie seu primeiro bloco no Store Framework
+    event: status
+    link: '{{ repoUrl }}/issues/4'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 4
+        data:
+          nextIssue: '5'
+          nextName: 'Info Card: o call to action do Store Framework'
+      - type: createIssue
+        title: 'Info Card: o call to action do Store Framework'
+        body: infocard.md
+  - title: 'Info Card: o call to action do Store Framework'
+    description: Definiremos um bloco call to action na nossa home
+    event: status
+    link: '{{ repoUrl }}/issues/5'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 5
+        data:
+          nextIssue: '6'
+          nextName: CSS handles e o poder da customização de blocos
+      - type: createIssue
+        title: CSS handles e o poder da customização de blocos
+        body: csshandles.md
+  - title: CSS handles e o poder da customização de blocos
+    description: Personalize o estilo dos seus blocos
+    event: status
+    link: '{{ repoUrl }}/issues/6'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 6
+        data:
+          nextIssue: '7'
+          nextName: 'Flex Layout: crie layouts utilizando o poder do Flexbox'
+      - type: createIssue
+        title: 'Flex Layout: crie layouts utilizando o poder do Flexbox'
+        body: flexlayout.md
+  - title: 'Flex Layout: crie layouts utilizando o poder do Flexbox'
+    description: Vamos criar layouts complexos de forma simples
+    event: status
+    link: '{{ repoUrl }}/issues/7'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 7
+        data:
+          nextIssue: '8'
+          nextName: Prateleira de produtos
+      - type: createIssue
+        title: Prateleira de produtos
+        body: shelf.md
+  - title: Prateleira de produtos
+    description: Como exibir uma vitrine de produtos de forma intuitiva
+    event: status
+    link: '{{ repoUrl }}/issues/8'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 8
+        data:
+          nextIssue: '9'
+          nextName: Carrossel de blocos
+      - type: createIssue
+        title: Carrossel de blocos
+        body: slider.md
+  - title: Carrossel de blocos
+    description: Insira conteúdo num layout de carrossel
+    event: status
+    link: '{{ repoUrl }}/issues/9'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 9
+        data:
+          nextIssue: '10'
+          nextName: Tornando seu conteúdo responsivo
+      - type: createIssue
+        title: Tornando seu conteúdo responsivo
+        body: responsive.md
+  - title: Tornando seu conteúdo responsivo
+    description: >-
+      Use o responsive layout para adaptar seu conteúdo para diferentes
+      dispositivos
+    event: status
+    link: '{{ repoUrl }}/issues/10'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 10
+        data:
+          nextIssue: '11'
+          nextName: Página de produto
+      - type: createIssue
+        title: Página de produto
+        body: pdp.md
+  - title: Página de produto
+    description: Primeiros passsos para montar uma página de detalhes de produto
+    event: status
+    link: '{{ repoUrl }}/issues/11'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 11
+        data:
+          nextIssue: '12'
+          nextName: Evoluindo sua página de produto (pdp)
+      - type: createIssue
+        title: Evoluindo sua página de produto (pdp)
+        body: pdp2.md
+  - title: Evoluindo sua página de produto (pdp)
+    description: Adicionando novos blocos e deixando a página mais interativa
+    event: status
+    link: '{{ repoUrl }}/issues/12'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 12
+        data:
+          nextIssue: '13'
+          nextName: Finalizando sua pdp
+      - type: createIssue
+        title: Finalizando sua pdp
+        body: pdp3.md
+  - title: Finalizando sua pdp
+    description: Usando produtos relacionados e alterando propriedades
+    event: status
+    link: '{{ repoUrl }}/issues/13'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 13
+        data:
+          nextIssue: '14'
+          nextName: Página de busca
+      - type: createIssue
+        title: Página de busca
+        body: search.md
+  - title: Página de busca
+    description: Conhecendo os blocos de uma página de busca
+    event: status
+    link: '{{ repoUrl }}/issues/14'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 14
+        data:
+          nextIssue: '15'
+          nextName: Ajustando layout da página de busca
+      - type: createIssue
+        title: Ajustando layout da página de busca
+        body: search2.md
+  - title: Ajustando layout da página de busca
+    description: Adicionando linhas e colunas para melhorar o layout da busca
+    event: status
+    link: '{{ repoUrl }}/issues/15'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 15
+        data:
+          nextIssue: '16'
+          nextName: Estilos globais
+      - type: createIssue
+        title: Estilos globais
+        body: styles.md
+  - title: Estilos globais
+    description: Altere classes semânticas para mudar o estilo da sua loja
+    event: status
+    link: '{{ repoUrl }}/issues/16'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 16
+        data:
+          nextIssue: '17'
+          nextName: Criando templates customizados
+      - type: createIssue
+        title: Criando templates customizados
+        body: template.md
+  - title: Criando templates customizados
+    description: Crie uma rota e associe um template customizado
+    event: status
+    link: '{{ repoUrl }}/issues/17'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 17
+        data:
+          nextIssue: '18'
+          nextName: Layout de abas
+      - type: createIssue
+        title: Layout de abas
+        body: tab-layout.md
+  - title: Layout de abas
+    description: Usando layout de abas na página institucional
+    event: status
+    link: '{{ repoUrl }}/issues/18'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 18
+        data:
+          nextIssue: '19'
+          nextName: Explorando o poder do rich text
+      - type: createIssue
+        title: Explorando o poder do rich text
+        body: richtextmarkdown.md
+  - title: Explorando o poder do rich text
+    description: Usando a linguagem do Markdown de forma avançada
+    event: status
+    link: '{{ repoUrl }}/issues/19'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 19
+        data:
+          nextIssue: '20'
+          nextName: Inserindo um Iframe na nossa página institucional
+      - type: createIssue
+        title: Inserindo um Iframe na nossa página institucional
+        body: iframe.md
+  - title: Inserindo um Iframe na nossa página institucional
+    description: Exibindo um post do Instagram na sua loja
+    event: status
+    link: '{{ repoUrl }}/issues/20'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 20
+        data:
+          nextIssue: '21'
+          nextName: Construindo uma landing customizada de busca
+      - type: createIssue
+        title: Construindo uma landing customizada de busca
+        body: landing.md
+  - title: Construindo uma landing customizada de busca
+    description: Definindo páginas de eventos com produtos customizados
+    event: status
+    link: '{{ repoUrl }}/issues/21'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 21
+        data:
+          nextIssue: '22'
+          nextName: Cabeçalho da loja
+      - type: createIssue
+        title: Cabeçalho da loja
+        body: header.md
+  - title: Cabeçalho da loja
+    description: Definindo blocos de cabeçalho e alterando iconografia
+    event: status
+    link: '{{ repoUrl }}/issues/22'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 22
+        data:
+          nextIssue: '23'
+          nextName: Menu
+      - type: createIssue
+        title: Menu
+        body: menu.md
+  - title: Menu
+    description: Criando a navegação da sua loja
+    event: status
+    link: '{{ repoUrl }}/issues/23'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 23
+        data:
+          nextIssue: '24'
+          nextName: Menu avançado com flex layout
+      - type: createIssue
+        title: Menu avançado com flex layout
+        body: menu-flex.md
+  - title: Menu avançado com flex layout
+    description: Enriquecendo o menu com outros blocos
+    event: status
+    link: '{{ repoUrl }}/issues/24'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
+      - type: respond
+        with: new-issue.md
+        issue: 24
+        data:
+          nextIssue: '25'
+          nextName: Rodapé
+      - type: createIssue
+        title: Rodapé
+        body: footer.md
+  - title: Rodapé
+    description: Definindo blocos de rodapé
+    event: status
+    link: '{{ repoUrl }}/issues/25'
+    actions:
+      - type: gate
+        left: '%payload.state%'
+        operator: ===
+        right: success
