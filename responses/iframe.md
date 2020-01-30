@@ -44,7 +44,7 @@ Let's display an Instagram post on your store page:
 :information_source: Remember to access the [Iframe documentation](https://vtex.io/docs/components/all/vtex.iframe/) if you have any questions during this activity.
 
 Expected result:
-![](https://appliancetheme.vteximg.com.br/arquivos/imagem-iframe.png)
+![](https://user-images.githubusercontent.com/18701182/73484453-1a0a9f00-4380-11ea-89d2-37e83c692210.png)
 
 ---
 

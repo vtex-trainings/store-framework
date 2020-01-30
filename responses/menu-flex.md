@@ -56,7 +56,7 @@ According to what we did in the last activity and what was learned about Flex La
 :information_source: Remember to access the documentation of both [Flex Layout](https://vtex.io/docs/components/layout/vtex.flex-layout) and [Menu](https://vtex.io/docs/components/all/vtex.menu/) if you have any questions during the activity.
 
 Expected result:
-![](https://appliancetheme.vteximg.com.br/arquivos/menu-flex.png)
+![](https://user-images.githubusercontent.com/18701182/73485057-365b0b80-4381-11ea-9c0b-4fad693f829a.png)
 
 ---
 

@@ -48,7 +48,7 @@ Other properties of the `rich-text` component can be found in the [Store Framewo
 3. Insert the title and subtitle in bold.
 
 Expected result:
-![](https://appliancetheme.vteximg.com.br/arquivos/rich-text-solution.png)
+![](https://user-images.githubusercontent.com/18701182/73487350-918efd00-4385-11ea-8d9d-ccc1c3952717.png)
 
 :information_source: Remember to access the Rich Text [documentation](https://vtex.io/docs/components/all/vtex.rich-text/) if you have any questions during the activity.
 
