@@ -1,16 +1,16 @@
-# Layout de abas
+# Tab layout
 
 ## :sparkles: **Branch:** tablayout
 
-## Introdução
+## Introduction
 
-O [Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) é um paradigma de estruturação de layouts criado no Store Framework para permitir a construção de layouts com abas ou guias.
+[Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) is layout structuring paradigm created in Store Framework to allow the creation of layouts with tabs. 
 
-Neste paradigma, temos dois containers: o `tab-list` e o `tab-content`. Em cada um destes containers, temos os itens que os compõem. Dentro do `tab-list`, temos os `tab-list.item`. Já no `tab-content`, temos os `tab-content.item`.
+We have the following two containers in this paradigm: `tab-list` and `tab-content`. Each of these containers contains the items that it's comprised of. In `tab-list`, we have `tab-list.item`, whereas in `tab-content`, we have `tab-content.item`, respectively.
 
-Abaixo, veremos um exemplo de implementação de um tab layout.
+We'll look at a tab layout implementation example below.
 
-Primeiro, é necessário declarar o block `tab-layout` no template desejado:
+First, you need to declare the `tab-layout` block in the desired template:
 
 ```json
 {
@@ -24,7 +24,7 @@ Primeiro, é necessário declarar o block `tab-layout` no template desejado:
 
 ```
 
-Depois, é necessário declarar um `tab-list` e um `tab-content` como children do `tab-layout`:
+Then, you need to declare a `tab-list` and a `tab-content` as `tab-layout`'s children:
 
 ```json
 ...
@@ -37,7 +37,7 @@ Depois, é necessário declarar um `tab-list` e um `tab-content` como children d
 ```
 
 
-Com isso, temos esses dois containers como componentes do nosso `tab-layout`. O próximo passo é declarar os `tab-list.item` e `tab-content.item` como children do `tab-list` e do `tab-content`, respectivamente:
+Having done this, these two containers are components of our `tab-layout`. The next step is to declare `tab-list.item` and `tab-content.item` as `tab-list`'s and `tab-content`'s children:
 
 ```json
 ...
@@ -59,11 +59,11 @@ Com isso, temos esses dois containers como componentes do nosso `tab-layout`. O 
 }
 ```
 
-Na próxima etapa, temos declarar que as propriedades dos `tab-list.item`. O código abaixo gera uma interface de tabs como a desta imagem:
+In the next step, we'll declare the `tab-list.item` properties. The code below creates a tab interface similar to the image below:
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/tab-list-items.png)
 
-A propriedade `tabId` é muito importante, pois ela é a chave que conecta o botão de um `tab-list.item` com um `tab-content.item`.
+The `tabId` property is very important as it's the key that connect a `tab-list.item` button with a `tab-content.item`.
 
 ```json
 ...
@@ -82,11 +82,11 @@ A propriedade `tabId` é muito importante, pois ela é a chave que conecta o bot
 }
 ```
 
-A seguir, vamos declarar as children e as props dos `tab-content.item`.
+Now, let's declare the children and props pertaining to `tab-content.item`.
 
-No array de children, é possível incluir diversos blocks como `rich-text`, `info-card`, `image`, `flex-layout` e etc.
+In the child array, you can include several blocks such as `rich-text`, `info-card`, `image`, `flex-layout` and etc.
 
-Na prop `tabId`, é necessário incluir os mesmos ids declarados nos `tab-list.item` para que o link entre a aba e o conteúdo funcione.
+In the `tabId` prop, you need to include the same ids that were declared in `tab-list.item` for the link between the tab and content to function properly.
 
 ```json
 ...
@@ -108,7 +108,7 @@ Na prop `tabId`, é necessário incluir os mesmos ids declarados nos `tab-list.i
 }
 ```
 
-Por fim, você deve declarar as propriedades do seu conteúdo. No nosso exemplo, colocamos apenas um `rich-text` em cada `tab-content.item`:
+Lastly, you must declare your content's proprieties. In our example, we just placed a `rich-text` in each `tab-content.item`:
 
 ```json
 "rich-text#1": {
@@ -127,21 +127,21 @@ Por fim, você deve declarar as propriedades do seu conteúdo. No nosso exemplo,
 }
 ```
 
-## Atividade
+## Activity
 
-Nesta atividade, vamos criar a estrutura simples de um tab layout, conforme imagem abaixo. Mais tarde, vamos incluir algum conteúdo para estilizar nossa página customizada.
+In this activity, we will create the simple structure of a tab layout, as shown below. Thereafter, we will add some content to give our page a custom style.
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/tarefa-tab-layout.png)
 
-1. No arquivo `about-us.jsonc` criado anteriormente, adicione um `tab-layout#home` ao template `store.custom#about-us`;
-2. Declare o bloco `tab-layout#home` e adicione como seus children um `tab-list#home` e um `tab-content#home`;
-3. Declare um `tab-list#home` e adicione como seus children um `tab-list.item#home1` e um `tab-list.item#home2`;
-4. Declare as props do `tab-list.item#home1` de maneira que a interface exiba o texto "Major Appliances". (Dica: não se esqueça que incluir nas props um `tabId` = `"majorAppliances"` e a propriedade `defaultActiveTab` = `true`);
-5. Declare as props do `tab-list.item#home2` de maneira que a interface exiba o texto "Electronics". (Dica: não se esqueça que incluir nas props um `tabId` = `"electronics"`);
-6. Agora, vamos para a parte o conteúdo. Declare um `tab-content#home` no seu tema e adicione os children `tab-content.item#home1` e `tab-content.item#home2`;
-7. Em cada `tab-content.item`, declare apenas um `rich-text` como children (por exemplo, `rich-text#home1` e `rich-text#home2`);
-8. Depois, inclua uma prop `tabId` em cada `tab-content.item` de maneira que aconteça o link entre o `tab-list` criado anteriormente e `tab-content`;
-9. Por fim, adicione os `rich-text` e declare suas props conforme o código abaixo:
+1. In the previously created `about-us.jsonc`, add a `tab-layout#home` to the `store.custom#about-us` template;
+2. Declare the `tab-layout#home` block and add `tab-list#home` and `tab-content#home` as its children;
+3. Declare `tab-list#home` and add `tab-list.item#home1` and `tab-list.item#home2` as its children;
+4. Declare the props pertaining to `tab-list.item#home1` so that the interface displays "Major Appliances". (Tip: Do not forget to include `tabId` = `"majorAppliances"` as well as the property `defaultActiveTab` = `true` to the props);
+5. Declare `tab-list.item#home2`'s props so that the interface displays "Electronics". (Tip: Don't forget to include `tabId` = `"electronics"` to the props);
+6. Now, let's move on to the content. Declare `tab-content#home` in your theme and add `tab-content.item#home1` and `tab-content.item#home2` as children;
+7. For each `tab-content.item`, declare just one `rich-text` as child (for example, `rich-text#home1` and `rich-text#home2`);
+8. Thereafter, include a `tabId` prop for each `tab-content.item` to create a link between the previously created `tab-list` and `tab-content`;
+9. Lastly, add the `rich-text` and declare its props according to the code below:
   
   ```json
   "rich-text#home1": {
@@ -160,16 +160,16 @@ Nesta atividade, vamos criar a estrutura simples de um tab layout, conforme imag
   }
   ```
   
-  :information_source: Lembre-se de acessar a documentação [Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) e do [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) caso tenha alguma dúvida durante a atividade.
+  :information_source: Remember to access the [Tab Layout](https://vtex.io/docs/components/layout/vtex.tab-layout) and [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) documentation for any questions during the activity. 
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Layout+de+abas) 
+Any problems with this step? How about sending us feedback? :pray:
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Layout+de+abas) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

@@ -1,19 +1,19 @@
-# Menu avançado com Flex Layout
+# Advanced menu with Flex Layout
 
 ## :sparkles: **Branch:** menuflex
 
-## Introdução 
+## Introduction 
 
-Como vimos no último passo, um Submenu aceita como *children* qualquer bloco do Store Framework.  
+As we've seen in the last step, a Submenu accepts any Store Framework block as *child*.
 
-A partir desse entendimento, podemos melhorar a configuração do [Menu](https://vtex.io/docs/components/all/vtex.menu/) feita na atividade anterior, incrementando seu conteúdo com o uso do [**Flex Layout**](https://vtex.io/docs/components/layout/vtex.flex-layout). 
+With this in mind, we can improve the previous activity's [Menu](https://vtex.io/docs/components/all/vtex.menu/) configuration, adding to its content by using [**Flex Layout**](https://vtex.io/docs/components/layout/vtex.flex-layout). 
 
-## Atividade
+## Activity
 
-De acordo com o que foi praticado na atividade anterior e o que foi aprendido sobre Flex Layout, vamos aplicar o Flex Layout no Submenu de *Major Appliance*. 
+According to what we did in the last activity and what was learned about Flex Layout, let's apply Flex Layout to the *Major Appliances* submenu. 
 
-1. No arquivo `menu.jsonc`, substitua `vtex.menu@2.x:menu#major` por `flex-layout.row#major` na lista de *children* do bloco `vtex.menu@2.x:submenu#major`;
-2. Defina em seguida o bloco `flex-layout.row#major`: 
+1. In the `menu.jsonc` file, replace `vtex.menu@2.x:menu#major` with `flex-layout.row#major` in the *children* list pertaining to the `vtex.menu@2.x:submenu#major` block;
+2. Them, define the following `flex-layout.row#major` block: 
 
 ```json
 ...
@@ -25,8 +25,8 @@ De acordo com o que foi praticado na atividade anterior e o que foi aprendido so
 },
 ```
 
-3. Agora temos que declarar os blocos definidos em  `flex-layout.row#major`. Para começar, declare o bloco `flex-layout.col#menu` com `vtex.menu@2.x:menu#major` como *children*;
-4. Faça o mesmo para o bloco `flex-layout.col#img`, o declarando com `image#menu` e `rich-text#header` como *children* e as seguintes props:
+3. Now, let's declare the blocks defined in `flex-layout.row#major`. To start, declare the `flex-layout.col#menu` block, having `vtex.menu@2.x:menu#major` as *child*;
+4. Do the same for the `flex-layout.col#img` block, declaring it as `image#menu`, while `rich-text#header` is declared as *child*, in addition to the following props:
 
 ```json
 ...
@@ -37,7 +37,7 @@ De acordo com o que foi praticado na atividade anterior e o que foi aprendido so
 ...
 ```
 
-5. Por último, vamos declarar o `image#menu` passado como *children* no último passo. Para isso, use o código abaixo: 
+5. Lastly, let's declare the former `image#menu` as *child* in this last step, using the code below:
 
 ```json
 ...
@@ -53,19 +53,19 @@ De acordo com o que foi praticado na atividade anterior e o que foi aprendido so
 }
 ```
 
-:information_source: Lembre-se de acessar a documentação do [Flex Layout](https://vtex.io/docs/components/layout/vtex.flex-layout) e do [Menu](https://vtex.io/docs/components/all/vtex.menu/) caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the documentation of both [Flex Layout](https://vtex.io/docs/components/layout/vtex.flex-layout) and [Menu](https://vtex.io/docs/components/all/vtex.menu/) if you have any questions during the activity.
 
-Resultado esperado:
+Expected result:
 ![](https://appliancetheme.vteximg.com.br/arquivos/menu-flex.png)
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Menu+avan%C3%A7ado+com+flex+layout) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Menu+avan%C3%A7ado+com+flex+layout) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

@@ -1,10 +1,10 @@
-# Criando templates customizados
+# Creating custom templates
 
 ## :sparkles: **Branch:** template
 
-## Introdução
+## Introduction
 
-Lojas são compostas por várias páginas diferentes, cada uma com layout e conteúdo específicos. Ao criar uma loja do zero no VTEX IO, algumas páginas padrão com URLs predefinidas já são disponibilizadas para você. Abaixo, vemos uma lista com algumas dessas páginas padrão:
+Stores are made up of several different pages, each with a specific content and layout. When creating a store from scratch in VTEX IO, some default pages with preset URLs are already available. Below, we have a list of some of these default pages:
 
 - `store.home` (Home page)
 - `store.product` (Product page)
@@ -13,20 +13,20 @@ Lojas são compostas por várias páginas diferentes, cada uma com layout e cont
 - `store.login` (Login page)
 - `store.orderplaced` (Order Placed page)
 
-Mas é possível que você queira criar uma landing page customizada. Nesse caso, você deve criar uma nova URL e um conteúdo específico para exibir aos usuários que acessarem essa rota.
+But it's also possible for you to create a custom landing page. In this case, you should create a new URL and specific content to display to users that access this path. 
 
-## Criando uma Landing Page
+## Creating a Landing Page
 
-São necessários poucos passos para se criar uma landing page customizada:
+Just a few steps a needed to create a custom landing page:
 
-1. Criar um novo template no tema sua loja
-2. Criar o novo path para acessar este template
+1. Create a new template in your store's theme
+2. Create a new path to access this template
 
 ### Template
 
-Um template define o layout da página. Portanto, se você deseja criar uma página personalizada, também precisará criar um novo template no seu tema.
+A template defines the page layout. However, if you want to create a custom page, you will also need to create a new template in your theme.
 
-Vamos supor que você queira criar uma página simples com informações sobre a sua loja. Dentro da pasta `blocks`, você pode criar um arquivo que contenha o seguinte código, declarando um novo template para uma página customizada,
+Let's imagine that your wanted to created a simple page containing information about your store. Inside the `blocks` folder, you can create a file that would contain the following code, declaring a new template for a custom page,
 
 ```json
 {
@@ -37,9 +37,9 @@ Vamos supor que você queira criar uma página simples com informações sobre a
 }
 ```
 
-onde `{templateName}` deve ser substituído pelo nome identificador do template.
+where `{templateName}` must be replaced with the template's identifying name. 
 
-A seguir, você deve preencher o código com os componentes necessários para montar o layout. Abaixo, vemos um exemplo dessa implementação:
+Then, you should fill in the code with the components needed to create the layout. Below we can an example of such implementation:
 
 ```json
 {
@@ -72,7 +72,7 @@ A seguir, você deve preencher o código com os componentes necessários para mo
  "rich-text#about-content": {
    "props": {
      "text":
-     " FlatFlat é uma loja de eletro eletrônicos com muita tradição na fabricação de itens modernos e vintage. Nosso objetivo é criar eletrodomésticos que tornem as casas dos nossos clientes interessantes, independente do estilo. Com apenas 2 meses de história, já somos a loja com os produtos mais bonitos de toda a VTEX. Estamos construindo o nosso site nesse momento com o intuito de dar ao nosso cliente uma experiência memorável com a nossa marca!"
+     " FlatFlat is an elentronics store with a long standing tradition for creating modern and vintage items. Out objective is to create home appliances that make your house stand out, no matter your style. Merely 2 months old, we're already the store with the most beautiful products among all VTEX stores. We are currently building our site with the aim of giving our customers an unforgetable experience with our brand!"
    }
  },
  "image#about-us": {
@@ -86,9 +86,9 @@ A seguir, você deve preencher o código com os componentes necessários para mo
 
 ### Path
 
-Agora que um novo template com o layout da página foi definido no código do tema da loja, a próxima etapa é definir o caminho (path) da página que acessará este layout.
+Now that a new template with the page layout has been defined in the store theme's code, the next step is to establish the page's page that would lead to this layout. 
 
-Devemos criar um arquivo `routes.json` dentro da pasta `store` do seu tema. Após isto, insira o código abaixo,
+We must create a `routes.json` file in your theme's `store` folder. Afterwards, insert the code below,
 
 ```json
 {
@@ -98,30 +98,30 @@ Devemos criar um arquivo `routes.json` dentro da pasta `store` do seu tema. Apó
 }
 ```
 
-onde `{URL}` é o nome do caminho desejado
+where `{URL}` is the name of the desired path.
 
-## Atividade
+## Activity
 
-Vamos criar uma página com informações sobre a sua loja conforme o exemplo abaixo:
+Let's create a page containing information about your store, as in the example below: 
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/about-us-activity.png)
 
-1. Na pasta `blocks`, crie um arquivo `about-us.jsonc`;
-2. Declare um template `store.custom#about-us` neste arquivo;
-3. Inclua um block "flex-layout.row#about-us" neste template;
-4. Após declarar o `flex-layout.row`, utilize o código do exemplo dado acima para completar o layout da página;
-5. Na pasta `store`, crie um arquivo `routes.json`;
-6. Neste arquivo, declare um path `/about-us`;
-7. Com o código linkado, acesse `{workspace}--appliancetheme.myvtex.com/about-us` para ver sua nova landing page.
+1. In the `blocks` folder, create a file called `about-us.jsonc`;
+2. Declare a `store.custom#about-us` template in this file;
+3. Include a "flex-layout.row#about-us" block in this template;
+4. After declaring `flex-layout.row`, use the code in example given above to complete the page layout;
+5. In the `store` folder, create a file called `routes.json`;
+6. In this file, declare an `/about-us` path;
+7. Once the code is linked, access `{workspace}--appliancetheme.myvtex.com/about-us` to see your new landing page.
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Criando+templates+customizados) 
+Any problems with this step? How about sending us feedback? :pray:
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Criando+templates+customizados) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

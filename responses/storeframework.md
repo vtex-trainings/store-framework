@@ -1,39 +1,40 @@
 # Store Framework 101
 
->Antes de começarmos a colocar as mãos na massa vamos passar por alguns conceitos importantes que serão recorrentemente referenciados daqui pra frente.
+>Before getting down to business there are some important, frequently occurring concepts you need to familiarize yourself with. 
 
-## Introdução
+## Introduction 
 
-O Store Framework é uma ferramenta *commerce low-code* de construção de frentes de loja únicas e customizadas.
+Store Framework is a *commerce low-code* tool used for building unique and custom storefronts.
 
-O fluxo de construção se dá pela customização de um **tema**, que pode ser trabalhado em diferentes **workspaces** sem que o ambiente de produção seja impactado. 
+The building flow starts with a custom **theme**, which can be worked on in different **workspaces**, without impacting the production environment.  
 
-## Tema 
+## Theme 
 
-Um tema é, essencialmente, um **arranjo de blocos** e suas posições. Nele são definidas todas as customizações, posições e estilos de cada um dos blocos que o compõem. Também é possível declarar novas páginas em um tema que, futuramente, podem representar páginas institucionais ou **landing pages** promocionais (dia das mães, black friday, cyber monday). O resultado final de um tema e o conteúdo que o compõe é a frente de uma loja.
+A theme is essentially an **arrangement of blocks** and their position. In a theme, you can define every customization, position and style for every block that theme encompasses. You can also declare new pages in a theme, pages that in the future may represent **about us** or promotional **landing** pages (such as mother's day, black Friday, cyber Monday pages). The theme's end result consists of the content it's comprised of, in addition to the storefront.
 
-## Blocos
+## Blocks
 
-Os blocos são a abstração mínima no Store Framework. Eles declaram pequenas peças que compõem o layout de uma loja. Por mais que pareçam simples, os blocos tem alto poder de customização, fazendo com que design complexos sejam possíveis de ser alcançados. Há **quatro níveis** de customização para blocos: 
-- **estilo semântico *(styles)***;
-- **propriedades *(props)***;
-- **classes css *(handles)***;
-- **filhos *(children)***  
+Blocks are the minimal abstraction in Store Framework. They declare small pieces that make up a store's layout. Although they may look simple at first, blocks are imbued with a high customization power, allowing us to achieve complex designs. There are a total of **four block customization levels**: 
+- **semantic style *(styles)***;
+- **properties *(props)***;
+- **css classes *(handles)***;
+- **children *(children)***  
 
 ![image](https://user-images.githubusercontent.com/18701182/68428069-266cca80-018a-11ea-958b-818d392583a8.png)
 
 ## Workspaces
 
-Ambientes de trabalho protegidos que representam uma cópia bem próxima do está montado em produção, possibilitando a evolução de temas sem que nada na loja seja afetado. 
+Secure work environments that show a very close copy of what is running in production, allowing themes to be developed further without affecting the store. 
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Store+Framework+101) 
+Any problems with this step? How about sending us feedback? :pray:
+
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Store+Framework+101) 
 
 ----
 
-## Para continuar clique em **Close issue**
+## Click on **Close issue** to continue

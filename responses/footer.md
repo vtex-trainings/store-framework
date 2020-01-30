@@ -1,20 +1,20 @@
-# Rodapé
+# Footer
 
 ## :sparkles: **Branch:** footer
 
-## Introdução
+## Introduction
 
-Neste passo, iremos aprender como criar um componente que é comumente visto como pouco relevante, mas que é fundamental para dar uma boa experiência ao usuário: o [footer](https://vtex.io/docs/components/all/vtex.store-footer/).
+In this step, we will learn how to create a component that is commonly seen as unimportant, but which is critical to providing a good user experience: the [footer](https://vtex.io/docs/components/all/vtex.store-footer/).
 
-Poucos usuários chegam a scrollar até o footer. Porém, essa parcela que chega pode estar procurando informações que usualmente são abrigadas neste bloco, como links para mídias sociais e meios de pagamento aceitos pela loja. Ele também pode abrigar páginas customizadas que direcionam ao site de vagas da empresa, suporte ao cliente e menus de categorias.
+Few users scroll until the footer. However, the ones that do make it that far may be looking for information that is usually housed in this block, such as links to social media and payment methods accepted by the store. It can also house customized pages that direct to the company's recruitment site, customer support and category menus. 
 
 FOTO Footer
 
-## Configurando o Footer
+## Configuring the Footer
 
-O bloco do Footer, assim como o do header, é responsivo. Isso significa que ele pode ser configurado para se adaptar a diferentes dispositivos, como desktop e mobile.
+The Footer block, just as the Header, is responsive, meaning that it can be configured to adapt to different devices, such as desktop and mobile.
 
-Abaixo, podemos conferir um exemplo de implementação do Footer para desktop:
+Below, we can see an Footer implementation example for desktop:
 
 ```json
 {
@@ -29,14 +29,14 @@ Abaixo, podemos conferir um exemplo de implementação do Footer para desktop:
 }
 ```
 
-## Atividade
+## Activity
 
-Agora, vamos configurar um footer para a página inicial da sua loja, levando em consideração o código exemplo apresentado acima para desktop e mobile.
+We are now going to configure a footer for the store's main page, considering the above-mentioned example code for desktop and mobile.
 
-Não implementaremos o menu nessa atividade, pois ele já foi visto no contexto do Header. Iremos cobrir os casos de meios de pagamento aceitos e redes sociais da loja.
+We will not implement the menu during this activity, since it's already be dealt with during the Header context. We will instead look at accepted payment methods and the store's social media networks. 
 
-1. No arquivo `footer.jsonc`, copie o código acima para usá-lo no seu tema;
-2. Declare o seguinte bloco em seguida:
+1. In the `footer.jsonc` file, copy the code above and to use in your theme; 
+2. Thereafter, declare the following block:
 
 ```json
   "flex-layout.row#footer-1-desktop": {
@@ -52,27 +52,27 @@ Não implementaremos o menu nessa atividade, pois ele já foi visto no contexto 
   }
 ```
 
-3. Com base no bloco acima, construa o `flex-layout.col#footer-left-desktop` com a seguinte children: `accepted-payment-methods`;
+3. Based on the block above, build the `flex-layout.col#footer-left-desktop`, having the following children: `accepted-payment-methods`;
 
-4. Agora construa o bloco `accepted-payment-methods` com os seguintes meios de pagamento: `MasterCard`, `Visa` e `Diners Club`. Só para mostrar um pouco mais de conhecimento, descubra também como mostrar os meios de pagamento em cores nesta [documentação](https://vtex.io/docs/components/all/vtex.store-footer/);
+4. Then, build the `accepted-payment-methods` block with the following payment methods: `MasterCard`, `Visa` and `Diners Club`. And just to gain a bit more knowledge, find out how to display payment methods in color in [this documentation](https://vtex.io/docs/components/all/vtex.store-footer/);
 
-5. No próximo passo iremos usar o bloco `social-networks` para mostrar as redes sociais da nossa loja. Veja na documentação como fazer isso. E implemente como children do bloco `flex-layout.col#footer-right-desktop`. Nós queremos mostrar `Facebook`, `Instagram` e `Twitter`.
+5. In this step, we will use the `social-networks` block to display our store's social media networks. Check the documentation for more on this, and then implement as the social media networks as children of the `flex-layout.col#footer-right-desktop` block. We want to display `Facebook`, `Instagram` and `Twitter`.
 
-6. Agora, faça os logos das redes sociais aparecerem com cores, como a [documentação](https://vtex.io/docs/components/all/vtex.store-footer/) do footer menciona.
+6. Lastly, make the social media network logos appear in color. Read the footer's [documentation](https://vtex.io/docs/components/all/vtex.store-footer/) for more on this.
 
-:information_source: Lembre-se de acessar a [documentação](https://vtex.io/docs/components/all/vtex.store-footer/) do Footer caso tenha alguma dúvida durante a atividade. 
+:information_source: Remember to access the footer's [documentation](https://vtex.io/docs/components/all/vtex.store-footer/) in case you have any questions during the activity. 
 
-Resultado esperado:
+Expected result:
 ![image](https://user-images.githubusercontent.com/12139385/70229436-00105f80-1735-11ea-9c26-9f16a3820f52.png)
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Rodap%C3%A9) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Rodap%C3%A9) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

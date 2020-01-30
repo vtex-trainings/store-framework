@@ -1,33 +1,33 @@
-# Página de produto
+# Product page
 
 ## :sparkles: **Branch:** pdp1
 
-## Introdução
+## Introduction
 
-Terminada a página inicial da nossa loja, começamos um novo template da loja: a página de produto. Páginas de produto são provavelmente o template que mais possuem blocos diferentes, o que as torna extremamente customizáveis e flexíveis.
+Once the store's homepage is done, we can start working on a new store template: the product page. Product pages are probably the templates with the most blocks, which makes them extremely flexible and customizable. 
 
 ## MVP
 
-Vamos então construir uma página de produto mínima, em que tenhamos somente o essencial:
+Let's build a minimal product page, with only the bare essentials:
 
-- **imagens;**
-- **preço;**
-- **nome;**
-- **botão de comprar**
+- **images;**
+- **prices;**
+- **names;**
+- **buy button**
 
 ![image](https://user-images.githubusercontent.com/18701182/69375575-6b632780-0c87-11ea-85d2-41e1e858a33e.png)
 
-## Blocos de produto
+## Product blocks
 
-A maioria dos blocos de produto, diferentemente dos de conteúdo, possuem um contexto ao qual estão inseridos. Tudo isso faz com que esses blocos sejam um pouco "plug-n-play": colocar um `product-images` na página de produto, automaticamente redenrizará as imagens do produto da página, da mesma forma se faz com o preço e o nome.
+Most product blocks, unlike content blocks, are inserted into a certain context, making them a little bit "plug-n-play": placing `product-images` on the product page will automatically lead to images being rendered on that page, the same being valid for price and name.
 
-Nada disso quer dizer, no entanto, que esses blocos são pouco customizáveis, conforme veremos adiante.
+This doesn't mean that these blocks are less customizable, quite the opposite actually, as we'll soon see.
 
-## Atividade
+## Activity
 
-Construa uma página de produto usando os blocos [`product-images`](https://vtex.io/docs/components/product-related/vtex.store-components/product-images), [`product-price`](https://vtex.io/docs/components/product-related/vtex.store-components/product-price), [`product-name`](https://vtex.io/docs/components/product-related/vtex.store-components/product-name) e [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button) no arquivo `product.jsonc` declarado dentro da pasta `store/blocks`. Esperamos que na estrutura tenhamos:  
+Build a product page using the following blocks in `product.jsonc` and declare it in the `store/blocks` folder: [`product-images`](https://vtex.io/docs/components/product-related/vtex.store-components/product-images), [`product-price`](https://vtex.io/docs/components/product-related/vtex.store-components/product-price), [`product-name`](https://vtex.io/docs/components/product-related/vtex.store-components/product-name) and [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button). We expect the structure to contain the following:  
 
-1. Uma **linha** na `store.product`;
+1. A **line** in `store.product`;
 
 ```json
 {
@@ -39,7 +39,7 @@ Construa uma página de produto usando os blocos [`product-images`](https://vtex
 }
 ```
 
-2. Dentro da **linha** devem haver **duas colunas**;
+2. That **line** should have **two columns**;
 
 ```json
 "flex-layout.row#main": { 
@@ -53,7 +53,7 @@ Construa uma página de produto usando os blocos [`product-images`](https://vtex
 }
 ```
 
-3. Dentro da coluna da esquerda deve haver um [`product-images`](https://vtex.io/docs/components/all/vtex.store-components/product-images);
+3. The left column must contain a [`product-images`](https://vtex.io/docs/components/all/vtex.store-components/product-images);
 
 ```json
 "flex-layout.col#left": {
@@ -63,23 +63,23 @@ Construa uma página de produto usando os blocos [`product-images`](https://vtex
 }
 ```
 
-4. Dentro da coluna da direita deve haver o [`product-name`](https://vtex.io/docs/components/all/vtex.store-components/product-name), [`product-price`](https://vtex.io/docs/components/all/vtex.store-components/product-price) e o [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button);
+4. The right column must contain the [`product-name`](https://vtex.io/docs/components/all/vtex.store-components/product-name), [`product-price`](https://vtex.io/docs/components/all/vtex.store-components/product-price) and [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button);
 
-Além disso, queremos que:
+In addition, we want:
 
-1. A coluna da direita esteja verticalmente alinhada ao centro (veja as props `verticalAlign` e `preventVerticalStretch` na [documentação de Flex Layout Column](https://vtex.io/docs/app/vtex.flex-layout#flex-layoutcol))
-2. O [`product-price`](https://vtex.io/docs/components/all/vtex.store-components/product-price#configuration) mostre o total de economia e o preço de listagem (`showSavings` e `showListPrice`)
+1. the right column to be vertically aligned to the center (see the `verticalAlign` and `preventVerticalStretch` props in the [Flex Layout Column documentation](https://vtex.io/docs/app/vtex.flex-layout#flex-layoutcol))
+2. the [`product-price`](https://vtex.io/docs/components/all/vtex.store-components/product-price#configuration) to show the total savings and list price (`showSavings` and `showListPrice`)
 
-:information_source: Lembre-se de acessar a documentação do [`product-images`](https://vtex.io/docs/components/product-related/vtex.store-components/product-images), [`product-price`](https://vtex.io/docs/components/product-related/vtex.store-components/product-price), [`product-name`](https://vtex.io/docs/components/product-related/vtex.store-components/product-name) e [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button) caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the [`product-images`](https://vtex.io/docs/components/product-related/vtex.store-components/product-images), [`product-price`](https://vtex.io/docs/components/product-related/vtex.store-components/product-price), [`product-name`](https://vtex.io/docs/components/product-related/vtex.store-components/product-name) e [`buy-button`](https://vtex.io/docs/app/vtex.store-components/buy-button) documentation in case you have any questions during your activity. 
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=P%C3%A1gina+de+produto) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=P%C3%A1gina+de+produto) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

@@ -1,31 +1,31 @@
-# Info Card: o call to action do Store Framework
+# Info Card: Store Framework's call to action 
 
 ## :sparkles: **Branch:** infocard
 
-## Introdução
+## Introduction
 
-Uma loja precisa de uma boa *home page* para manter a atenção do usuário, aumentando o tempo de sessão e, portanto, aumentando as chances de conversão. Para que isso seja possível, vários elementos podem ser usados, como: banners promocionais, prateleiras de destaque, conteúdos institucionais.
+A store needs a good *home page* to engage users, increasing session time and therefore conversion chances. To achieve this, several elements need to be used, such as promotional banners, shelves with highlights, about us material, etc. 
 
-Criaremos o próximo bloco na *home page* usando um *Call to Action*. No Store Framework, temos um bloco que serve para esse propósito chamado [**Info Card**](https://vtex.io/docs/app/vtex.store-components/Info-Card).
+We have created the next block on the *home page* using a *call to action*. In Store Framework, we have a block designed for this purpose, called [**Info Card**](https://vtex.io/docs/app/vtex.store-components/Info-Card).
 
 ## Info Card
 
 ![image](https://user-images.githubusercontent.com/18701182/68480411-7b085800-0213-11ea-9426-31dcb0d0aa7d.png)
 
-Com o Info Card, é possível criar imagens com links e botões (no topo ou na lateral do bloco) que direcionem o fluxo do usuário (*Call to Action*).
+Using the Info Card, you can create images which have links and buttons (top or side of the block) that direct the user's flow (*Call to action*).
 
-Olhando a [documentação](https://vtex.io/docs/app/vtex.store-components/info-card#blocks-api) é possível ver que:
+Looking at the [documentation](https://vtex.io/docs/app/vtex.store-components/info-card#blocks-api), we can see that:
 
-- `isFullModeStyle` define se o *Call to Action (CTA)* deve estar acima do banner;
-- `textPosition` definirá a posição do texto;
-- `textAlignment` definirá o alinhamento do texto;
-- `imageUrl` definirá qual imagem será usada como banner;
-- `headline` determinará qual o texto que será usado de título;
-- `callToActionMode` possibilitará a escolha do *CTA* como sendo um link ou um botão;
-- `callToActionText` definirá o texto do *CTA*;
-- `callToActionUrl` determinará o link ao qual será redirecionado;
+- `isFullModeStyle` defines whether the *Call to Action (CTA)* is set above the banner;
+- `textPosition` defines the position of the text;
+- `textAlignment` defines the text's alignment;
+- `imageUrl` defines which image will be used as banner;
+- `headline` determines which text will be used as headline;
+- `callToActionMode` allows to choose the *CTA* mode as either a link or a button;
+- `callToActionText` defines the *CTA* text;
+- `callToActionUrl` determines the URL to which it redirects;
 
-Ficamos, assim, com as seguintes props:
+We therefore have the following props:
 
 ```json
   {
@@ -57,14 +57,14 @@ Ficamos, assim, com as seguintes props:
   }
 ```
 
-## Instanciando blocos
+## Instancing blocks
 
-Pode ser que você tenha se perguntado: 
-> "E se eu quiser ter dois Info Cards com aparências diferentes?" 
+You may have asked yourself: 
+> "What if I wanted to have two different Info Cards?" 
 
-Isso é possível através da **instanciação de blocos**.
+It's possible through **block instancing**.
 
-Todos os blocos têm nomes preestabelecidos, mas você pode criar instâncias deles e definir aparências diferentes para um mesmo tipo de bloco. Para fazer isso, basta colocar um `#` com um nome **arbitrário** e que faça sentido depois da definição de cada bloco, por exemplo:
+All block have pre-established names, but you can create block instances and define different ways in which the block types appear. After each block has been defined, simply place an '#' with an **arbitrary** name that makes, for example:
 
 ```json
   {
@@ -91,32 +91,32 @@ Todos os blocos têm nomes preestabelecidos, mas você pode criar instâncias de
   }
 ```
 
-> **ATENÇÃO:** Durante o curso serão vistos vários `...`, essa parte não deve ser copiada e representa o progresso de steps anteriores
+> **WARNING:** Throughout the course, you will notice several `...`, which you should not copy as it represents the progress achieved during previous steps. 
+> 
+## Activity
 
-## Atividade
+In the `home.jsonc` file, based on the code above, create the `info-card#button-left` right under the infocard: `info-card#button-right`. This new infocard must implement the following:
 
-A partir do código acima, no arquivo `home.jsonc`, crie o `info-card#button-left` logo abaixo do infocard `info-card#button-right`. Este novo infocard deve possuir:
+ 1. The title must be `Shining chrome`
+ 2. A link type call-to-action with the following text instead of a button: `Go to Collection` 
+ 3. The following image `https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png`
+ 4. The following subtitle `Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.`
+ 5. Text to the left of the image (`textPosition`).
 
- 1. O título `Shining chrome`
- 2. Um call to action do tipo link com o texto `Go to Collection` no lugar do botao
- 3. A imagem `https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png`
- 4. O subtítulo `Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.`
- 5. O texto posicionado à esquerda da imagem (`textPosition`).
-
-O resultado esperado é semelhante ao apresentado na imagem abaixo:
+The expected result will look similar to this:
 
 ![image](https://appliancetheme.vteximg.com.br/arquivos/info-card-activity.png)
 
-:information_source: Lembre-se de acessar a documentação do [Info Card](https://vtex.io/docs/app/vtex.store-components/Info-Card) caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the [Info Card](https://vtex.io/docs/app/vtex.store-components/Info-Card) documentation if you have any questions regarding the activity.
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Info+Card:+o+call+to+action+do+Store+Framework) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Info+Card:+o+call+to+action+do+Store+Framework) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

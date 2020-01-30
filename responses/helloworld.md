@@ -2,23 +2,23 @@
 
 ## :sparkles: **Branch:** richtext
 
-## Introdução
+## Introduction
 
-Começamos nossa jornada pelo clássico **"Hello, World!"**. Para criar algo do tipo, precisamos conhecer os blocos do Store Framework e usar um que nos possibilite a criação de textos. Este bloco se chama [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/).
+We begin our journey with the classic **"Hello, World!"**. In order to create something similar, we need to understand the Store Framework blocks and use one that allows us to create texts. This block is aptly called [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/).
 
 ## Rich Text
 
 <img src="https://user-images.githubusercontent.com/18701182/68885337-be6f3480-06f3-11ea-99dd-7d33ad3777cb.png" width="150" />
 
-O Rich Text é somente um das dezenas de blocos disponíveis no Store Framework. É um bloco que parece simples, mas que possibilita uma série de customizações para criar textos. Para começar, todo texto escrito no Rich Text suporta [linguagem Markdown](https://www.markdownguide.org/cheat-sheet/), isso faz com que a estilização do texto seja muito mais fácil. 
+The Rich Text is only one of the dozens of blocks available in Store Framework. It's a block that seems simple, but that allows a series of customizations meant to create texts. To start, any text written in Rich Text supports [Markdown](https://www.markdownguide.org/cheat-sheet/), making text styling much easier. 
 
-Olhando a [documentação](https://vtex.io/docs/app/vtex.rich-text#blocks-api) do bloco é possível encontrar a especificação técnica. Uma das seções presentes é a de **Blocks API** nela é vista toda a lista de **propriedades *(props)*** que o Rich Text possui. As propriedades são o principal **ponto de customização** de um bloco, são elas que garantem que um mesmo bloco possa ter visual e comportamento completamente diferente, dependendo de como for configurado.
+Looking at the block's [documentation](https://vtex.io/docs/app/vtex.rich-text#blocks-api), we can find a technical specification. One of the sessions present is that of the **Blocks API**, in which we can see the list of all Rich Text **properties (props)**. These properties are the main **customization points** of a block, which give a block its distinct visual and behavior, depending on how its been configured. 
 
-## Começando
+## Starting out
 
-Vamos então começar a personalizar a *home page*. No seu tema é possível encontrar um arquivo chamado `home.jsonc` na pasta `/store/blocks`. Neste arquivo é determinada a organização dos blocos que se deseja usar. A linguagem para composição do layout é simples e baseada em [JSON](http://www.json.org/json-pt.html).
+We'll start by customizing the *home page*. In your theme's `/store/blocks` folder, you'll find a file called `home.jsonc`. This file determines how the blocks you intend to use are organized. The language used in the layout composition is simple and based on [JSON](http://www.json.org/json-en.html).
 
-No `home.jsonc` se ver um bloco que é padrão em todos os temas: `store.home`. Este bloco determina os blocos filhos que estarão expostos na *home page*. 
+In `home.jsonc`, you'll notice a block which is default in all themes, namely `store.home`. This block determines which child blocks will be displayed on the home page. 
 
 ```json
 {
@@ -29,7 +29,7 @@ No `home.jsonc` se ver um bloco que é padrão em todos os temas: `store.home`. 
 }
 ```
 
-Vamos então usar o Rich Text em seu corpo:
+Let's use Rich Text in its body:
 
 ```json
 {
@@ -42,25 +42,25 @@ Vamos então usar o Rich Text em seu corpo:
 }
 ```
 
-Dessa forma, o `store.home` agora sabe que precisará renderizar um Rich Text. Todavia, ainda não especificamos qual o visual desse Rich Text. Para isso, precisamos fazer uma **definição de bloco**.
+Thus, `store.home` now knows that it needs to render a Rich Text. However, we're haven't yet specified which visual this Rich Text should adopt. For that, we'll need to **define the block**.
 
-## Definição de blocos
+## Defining blocks
 
-A definição de blocos deve ser sempre feita fora de qualquer outro bloco, no nível da raiz do arquivo JSON.
+Defining a block must always be performed apart from any other block, at thee source level of the JSON file. 
 
 ```json
 {
   "store.home": {
     "blocks": [
-      "rich-text" <----- Aqui o bloco está sendo usado dentro de outro
+      "rich-text" <----- Here the block is used within another
     ]
   },
-  "rich-text": { <----- Aqui está na raiz
+  "rich-text": { <----- Here it's at source level
   }
 }
 ```
 
-Na definição é possível determinar o comportamento e visual de um bloco. Para tal devem ser usados **pontos de customização**, começaremos usando as `props` do Rich Text:
+In the block's definition, you can set its behavior and visual. **Customization points** have to be used to achieve this, so we'll start off using the Rich Text `props`: 
 
 ```json
 {
@@ -77,11 +77,11 @@ Na definição é possível determinar o comportamento e visual de um bloco. Par
 }
 ```
 
-Observe novamente a [documentação](https://vtex.io/docs/app/vtex.rich-text#blocks-api) do Rich Text e vamos, então, definir as props que usaremos para customizá-lo.
+Read through the Rich Text [documentation](https://vtex.io/docs/app/vtex.rich-text#blocks-api) one more time and let's define the props we'll use to customize the block.
 
-Queremos fazer um simples "Hello, World!", olhando nas props vemos uma que se chama: `text` [(Text written in markdown language to be displayed)](https://vtex.io/docs/app/vtex.rich-text#blocks-api). Essa é, então, a prop que determinará qual o texto que será exibido. 
+We want to achieve a simple "Hello, World!", and looking at the props we notice one called: `text` [(Text written in markdown language to be displayed)](https://vtex.io/docs/app/vtex.rich-text#blocks-api). This is the prop that determines which text will be displayed.
 
-Incluindo essa prop temos, então:
+Including this prop, we now have the following:
 
 ```json
 {
@@ -98,7 +98,7 @@ Incluindo essa prop temos, então:
 }
 ```
 
-Olhando a [documentação do Markdown](https://www.markdownguide.org/cheat-sheet/) vemos que para deixar *itálico* basta colocar `*` antes e depois do texto: 
+Reading through the [Markdown documentation](https://www.markdownguide.org/cheat-sheet/), we learn that in order for a text to appear in *italic*, we just need to place that text between `*`: 
 
 ```json
 {
@@ -115,7 +115,7 @@ Olhando a [documentação do Markdown](https://www.markdownguide.org/cheat-sheet
 }
 ```
 
-Para posicioná-lo ao centro, podemos adicionar a prop `textPosition`  e atribuir a ela o valor `CENTER`:
+To center align the text, we can add the `textPosition`  prop and give it the `CENTER` value:
 
 ```json
 {
@@ -133,22 +133,22 @@ Para posicioná-lo ao centro, podemos adicionar a prop `textPosition`  e atribui
 }
 ```
 
-## Atividade
+## Activity
 
-Defina um [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) na sua home e crie um texto "Hello, World!" em **negrito** e **posicionado à direita**.
+Define a [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) on your home page and create a **bold** "Hello, World!" that's **right aligned**.
 
 <img src="https://user-images.githubusercontent.com/12139385/70143376-2e7d3480-167a-11ea-8727-2bc6a9422f21.png" width="150" />
 
-:information_source: Lembre-se de acessar a [documentação](https://vtex.io/docs/components/all/vtex.rich-text/) do Rich Text caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the Rich Text [documentation](https://vtex.io/docs/components/all/vtex.rich-text/) if you have any questions during the activity.
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Hello,+World!) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Hello,+World!) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

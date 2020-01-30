@@ -1,66 +1,51 @@
-# Estilos globais
+# Global Styles  
+  
+## :sparkles: *Branch:* styles 
 
-## :sparkles: **Branch:** styles
+## Introduction 
 
-## Introdução
+In addition to css, which we looked at previously, Store Framework offers another type of design customization, based on `style.json`. 
 
-Além do css, que já foi aprendido anteriormente, o Store Framework oferece um outro tipo de customização de design, provida a partir do `style.json`.
+## Semantic styling
 
-## Estilização semântica
+Every Store Framework block benefit from the same semantic styles definitions, based on [Tachyons](https://tachyons.io/). 
+In practice, it means that instead of having to change all button backgrounds to use color that you want, you just need to redefine the color of an `action-primary` `background`. Customizations using `style.json` tend a very big impact through css, since the store's visual identity across every page is usually maintained that way, without requiring a lot of changes. Therefore, use this tool whenever possible, thus avoiding unnecessary css overhead. 
 
-Todos os blocos do Store Framework se alavancam das mesmas definições semânticas de estilo, definidas usando o [Tachyons](https://tachyons.io/). Na prática, isso significa que ao invés de precisar mudar todos os fundos de botões para usar a cor que se interessa, é necessário apenas redefinir a cor que um `background` de uma `action-primary` tem.
+## Investigating `style.json` 
+### Colors
 
-Customizações através do `style.json` tendem a ter um impacto muito maior que através de css, pois, em geral, mantém a identidade visual da loja ao longo de todas as páginas sendo necessárias poucas mudanças. Por esse motivo, sempre que possível, essa ferramenta deve ser usada, evitando assim overhead de css desnecessário.
+![](https://user-images.githubusercontent.com/18701182/69848546-24fa6380-1259-11ea-9978-9020222ed77e.png) 
 
-## Investigando o `style.json`
+`styles/configs/style.json` can be confusing at first, because it contains all the style definitions that every Store Framework visual block uses. However, inspecting browser elements is usually a good way to identify which styles to change. For example, *right mouse click on any store button and select inspect*. 
 
-### Cores
+![](https://user-images.githubusercontent.com/18701182/69848770-b36ee500-1259-11ea-882a-b2ac5ebdde4d.png) 
 
-<img src="https://user-images.githubusercontent.com/18701182/69848546-24fa6380-1259-11ea-9978-9020222ed77e.png" width="400" />
+Looking at the side bar that opened in Chrome, we notice a couple of definitions, one of them being the button background color (#0f3e99): 
 
-O `styles/configs/style.json` pode ser confuso em primeiro momento, por conter todas as definições de estilo que todos os blocos visuais do Store Framework usam. No entanto, um bom fluxo para identificar que estilos mudar, é através da inspeção de elementos no browser.
+![](https://user-images.githubusercontent.com/18701182/69849050-77884f80-125a-11ea-87d2-7a148fd56787.png) 
 
-Por exemplo, **clique com o botão direito em cima de qualquer botão da loja aperte em inspecionar**.
+In addition, if you inspect while hovering, you'll notice the *hover* color (#072c75): ![image](https://user-images.githubusercontent.com/18701182/69849774-5f193480-125c-11ea-82e2-f118c8014287.png) 
 
-<img src="https://user-images.githubusercontent.com/18701182/69848770-b36ee500-1259-11ea-882a-b2ac5ebdde4d.png" width="400" />
+If we search the occurrences of both colors in `style.json`, we uncover that the colors we inspected are actually used as `action-primary` for the `hover-background` and `background`, for example. This gives us a better idea of where this definition may appear again. 
 
-Observando a barra lateral no Chrome que abriu é possível ver uma série de definições, uma delas é a de cor do background do botão (#0f3e99):
+### Typography 
 
-<img src="https://user-images.githubusercontent.com/18701182/69849050-77884f80-125a-11ea-87d2-7a148fd56787.png" width="500" />
+The process to discovering text semantics with editable fields is the same as the above, we can search for attributes such as font size, weight and family. When inspecting a level 1 heading for example, we notice that its size is 3 rem.
 
-Além dela, se você inspecionar no momento em que estiver somente passando o mouse em cima do botão, descobrirá a cor de *hover* (#072c75):
+![image](https://user-images.githubusercontent.com/18701182/69850262-ab18a900-125d-11ea-8ba8-e6a64874ca04.png) ![image](https://user-images.githubusercontent.com/18701182/69850281-b1a72080-125d-11ea-8c46-302b6a4f9749.png) 
 
-![image](https://user-images.githubusercontent.com/18701182/69849774-5f193480-125c-11ea-82e2-f118c8014287.png)
+## Activity 
 
-Se fizermos uma busca pelas ocorrências de ambas as cores no `style.json`, as cores que descobrimos são, respectivamente, as usadas para `action-primary` em `hover-background` e `background`, por exemplo. Isso nos dá uma ideia melhor de onde poderemos achar outras ocorrências dessa mesma definição.
+![](https://user-images.githubusercontent.com/18701182/69850673-8b35b500-125e-11ea-824b-3f3f3235e575.png) 1. In `style.json`, replace every color occurrence that you find, substituting: - **#072c75** with **#45a6a3** - **#0F3E99** with **#52BAB7** 
+2. Change the font size for a level 1 heading so that its height is now 2.5 rem 
 
-### Tipografia
+--- 
 
-Para descobrir definições semânticas de texto e quais campos são editáveis, o processo é o mesmo do anterior, podemos buscar atributos como tamanho da fonte, peso, família.
+### :no_entry_sign: Lost? 
 
-Em um cabeçalho nível 1, por exemplo, ao inspecionar descobrimos que seu tamanho foi definido como 3 rem.
+Any problems with this step? How about sending us feedback? :pray:
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Estilos+globais) 
 
-![image](https://user-images.githubusercontent.com/18701182/69850262-ab18a900-125d-11ea-8ba8-e6a64874ca04.png)
-![image](https://user-images.githubusercontent.com/18701182/69850281-b1a72080-125d-11ea-8c46-302b6a4f9749.png)
+---- 
 
-## Atividade
-
-<img src="https://user-images.githubusercontent.com/18701182/69850673-8b35b500-125e-11ea-824b-3f3f3235e575.png" width="400" />
-
-
-1. No arquivo `style.json`, substitua todas as ocorrências das cores que encontramos, trocando:
-  - **#072c75** por **#45a6a3**
-  - **#0F3E99** por **#52BAB7**
-2. Mude o tamanho da fonte heading level 1 para que agora tenha 2.5 rem de altura
-
----
-
-### :no_entry_sign: Perdido? 
-
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
-
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Estilos+globais) 
-
-----
-
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

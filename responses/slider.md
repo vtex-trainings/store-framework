@@ -1,18 +1,18 @@
-# Carrossel de blocos
+# Blocks Carousel
 
 ## :sparkles: **Branch:** slider-layout
 
 ## Introdução
 
-O Slider Layout, como o Flex Layout, é uma forma flexível de criar um novo bloco a partir de outros blocos usando `children`. Ele permite que sejam criados sliders de outros blocos, como `info-card`s e até mesmo `flex-layout`s por exemplo.
+The Slider Layout, just as the Flex Layout, is a flexible way of creating a new block based on other blocks, using `children`. It allows slider from other blocks to be created, such as `info-card` and even `flex-layout`, for example.
 
-Vamos utilizar o Slider Layout para tornar um conjunto de info-cards em um slider.
+Let's use the Slider Layout to transform a couple of info-cards into a slide.
 
 ## Slider Layout
 
-Analisando a [documentação](https://vtex.io/docs/components/layout/vtex.slider-layout), vemos que você pode utilizar qualquer _array_ de blocos como `children`, assim como no Flex Layout.
+Looking at the [documentation](https://vtex.io/docs/components/layout/vtex.slider-layout), we notice that we can use any block _array_ as `children`, just as with Flex Layout.
 
-Abaixo, segue um exemplo de implementação de um slider-layout com dois `info-card`:
+Below, you have an implementation example of a slider-layout with two `info-card`:
 
 ```json
 
@@ -48,19 +48,19 @@ Abaixo, segue um exemplo de implementação de um slider-layout com dois `info-c
 
 ```
 
-## Atividade
+## Activity
 
-Nesta atividade, vamos criar um slider de marcas para o nosso site:
+In this activity, we will create a brand slider for our site: 
 
 ![](https://appliancetheme.vteximg.com.br/arquivos/brand-slider.png)
 
-1. No arquivo `home.jsonc`, declare o bloco `slider-layout#home` ao template `store.home`.
+1. In `home.jsonc`, declare the `slider-layout#home` block to the `store.home` template.
 
-2. Crie um arquivo chamado `slider-layout.jsonc` dentro da pasta `/store/blocks`;
+2. Create a file called `slider-layout.jsonc` in the `/store/blocks` folder;
 
-3. Neste arquivo, baseando-se no código acima, substitua os `info-card` declarados como children de `slider-layout#home` e adicione 6 [componentes de imagem](https://vtex.io/docs/components/general/vtex.store-components/image) `image` como children. Utilize o formato `image#brand1`, `image#brand2` (...) `image#brand6` para declarar os componentes;
+3. In this file, based on the above-mentioned code, replace the declared `info-card` as `slider-layout#home`'s children and add 6 `image` [image components](https://vtex.io/docs/components/general/vtex.store-components/image) as children. As format, use `image#brand1`, `image#brand2` (...) `image#brand6` to declare the components;
 
-4. Declare uma prop `src` específica para cada `image#brand` definido. Utilize as URLs abaixo para cada uma delas:
+4. Declare a specific `src` prop for each defined `image#brand`. Use the URLs below for each:
    1.  `https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square1.png`
    2.  `https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square2.png`
    3.  `https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square3.png`
@@ -68,18 +68,19 @@ Nesta atividade, vamos criar um slider de marcas para o nosso site:
    5.  `https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square5.png`
    6.  `https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square6.png`
    
-5. Por fim, você deve utilizar a propriedade de `autoplay` no bloco `slider-layout#home`. Faça com que o slide aconteça automaticamente a cada **7 segundos e que ele pare quando o usuário passar o mouse em cima do slide**.
+5. Lastly, you have to use the `autoplay` property in the `slider-layout#home` block. Make the slider occur automatically every **7 seconds and also make it stop when the user hovers over the slide**.
 
-:information_source: Lembre-se de acessar a documentação do [Slider Layout](https://vtex.io/docs/components/layout/vtex.slider-layout) e [Image](https://vtex.io/docs/components/general/vtex.store-components/image) caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to go through the [Slider Layout](https://vtex.io/docs/components/layout/vtex.slider-layout) and [Image](https://vtex.io/docs/components/general/vtex.store-components/image) documentation if you have any questions during the activity.
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Carrossel+de+blocos) 
+Any problems with this step? How about sending us feedback? :pray:
+
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Carrossel+de+blocos) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

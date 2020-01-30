@@ -1,31 +1,31 @@
-# Flex Layout: crie layouts utilizando o poder do Flexbox
+# Flex Layout: create layouts using the power of Flexbox
 
 ## :sparkles: **Branch:** flexlayout
 
-## Introdução
+## Introduction
 
-O [Flex Layout](https://vtex.io/docs/components/layout/vtex.flex-layout) é um paradigma de estruturação de layout criado no Store Framework para permitir a construção de layouts complexos. Esse paradigma usa o conceito de **linhas** e **colunas** para definir a estrutura e o posicionamento desejados dos blocos em uma determinada página.
+The [Flex Layout](https://vtex.io/docs/components/layout/vtex.flex-layout) is a layout structuring paradigm created in Store Framework to allow the construction of complex layouts. This paradigm uses the concepts of **lines** and **columns** to define the desired block structure and positioning on a certain page. 
 
-Existem dois blocos de construção básicos de cada Flex Layout:
+There are two basic building blocks for each Flex Layout:
 
 - `flex-layout.row`
 - `flex-layout.col`
 
-Se você já está familiarizado com o Flexbox utilizado no CSS, o Flex Layout deve ser simples de entender, já que o Flexbox está sendo utilizar "por debaixo dos panos" pelo flex-layout.row e flex-layout.col.
+If you are already familiar with the Flexbox used in CSS, the Flex Layout should be easy to understand, since Flexbox is already used "under the hood" by flex-layout.row and flex-layout.col.
 
 ## Flex Layout
 
-Com o Flex Layout é possível criar layouts personalizados, utilizando a estrutura de linhas e colunas do Flexbox.
+With the help of Flex Layout, you can create customized layouts, using the Flexbox structure of lines and columns.
 
-Analisando a documentação do bloco, vemos que você pode utilizar qualquer *array* de blocos como `children` do Flex Layout. Além disso, você deve sempre usar `flex-layout.row` e `flex-layout.col`, **NUNCA** `flex-layout` de forma isolada.
+Analyzing the block's documentation, we see that you can use any block *array* as Flex Layout's `children`. In addition, you should always use `flex-layout.row` and `flex-layout.col`, and **NEVER** `flex-layout` alone.
 
-Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com dois *children*: um `info-card` e um `rich-text`:
+Below, we have an example of a flex layout comprised of a `flex-layout.row` with two *children*: an `info-card` and a `rich-text`:
 
 ```json
   "flex-layout.row":{
     "children": [
       "info-card#rethink",
-      "rich-text#deletar"
+      "rich-text#delete"
     ]
   },
   
@@ -46,13 +46,13 @@ Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com doi
   }
 ```
 
-## Atividade
+## Activity
 
-1. Declare o `flex-layout.row` dentro dos `blocks` do template de `store.home` e declare os blocos propostos acima no seu arquivo `home.jsonc`
-2. Altere as *children* do `flex-layout.row`, substituindo o bloco `rich-text` por uma coluna `flex-layout.col`.
-3. Delete o bloco de `rich-text` proposto acima do seu tema.
-4. Declare o bloco `flex-layout.col` no seu arquivo `home.jsonc` com dois componentes de imagem como children: `image#electronics` e `image#major-appliance`, *nesta ordem*.
-5. Defina os blocos `image` com as seguintes props:
+1. Declare the `flex-layout.row` in the `store.home`'s template `blocks` and then declare the blocks mentioned above in your `home.jsonc` file.
+2. Edit the `flex-layout.row` *children*, substituting the `rich-text` block with a `flex-layout.col` column.
+3. Delete the above-mentioned `rich-text` block from your theme. 
+4. Declare the `flex-layout.col` block in your `home.jsonc` file with two image components as children: `image#electronics` and `image#major-appliance`, *in this order*.
+5. Define the `image` blocks with the following props:
 
 ```json
 ...
@@ -70,20 +70,20 @@ Abaixo, temos um exemplo de flex layout composto de um `flex-layout.row` com doi
 }
 ```
 
-O resultado obtido deve ser semelhante a este:
+The result should be similar to this:
 
 ![image](https://user-images.githubusercontent.com/12139385/70185681-0c5ed300-16c9-11ea-9260-b88179b508f2.png)
 
-:information_source: Lembre-se de acessar a [documentação](https://vtex.io/docs/components/layout/vtex.flex-layout) do Flex Layout caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the Flex Layout [documentation](https://vtex.io/docs/components/layout/vtex.flex-layout) in case you have any questions during the activity.
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Flex+Layout:+crie+layouts+utilizando+o+poder+do+Flexbox) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Flex+Layout:+crie+layouts+utilizando+o+poder+do+Flexbox) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

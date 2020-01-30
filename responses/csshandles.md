@@ -1,23 +1,23 @@
-# CSS Handles e o poder da customização de blocos
+# CSS Handles and the power of customizing blocks
 
 ## :sparkles: **Branch:** csshandles
 
-## Introdução
+## Introduction
 
-Dando uma rápida olhada na sua loja atual, você conseguirá perceber que todos os componentes possuem estilos parecidos, mesmo que nenhuma customização tenha sido feita por você.
+Taking a quick look at your online store, you'll notice that components have similar styles, even without applying any customization. 
 
-Todos eles, incluindo o [Info Card](https://vtex.io/docs/components/all/vtex.store-components/info-card) recém configurado, compartilham **valores pré-estabelecidos** para fonte, cor de fundo, cor principal, formato dos botões, etc.
+All of them, including the recently configured [Info Card](https://vtex.io/docs/components/all/vtex.store-components/info-card), share **pre-established values** for font, background color, main color, button format, etc.
 
-Isso se deve ao `style.json`, arquivo responsável por declarar valores genéricos de customização para toda loja do Store Framework.
+This is due to the `style.json`, the file responsible for declaring generic customization values for every Store Framework store. 
 
 ![style](https://user-images.githubusercontent.com/52087100/69889933-60854400-12d2-11ea-8d11-97aef0f3bf83.png)
 
-Para criar uma identidade própria para os componentes da sua loja, você pode sobrescrever esses valores por meio de **customizações de CSS**.
+To create a unique identity for your store's components, you can overwrite these values using **CSS customizations**.
 
-Analisando a [recipe](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization) para customizações de loja por CSS, percebemos que alguns passos serão necessários para aplicar o estilo próprio desejado por você, como:
+Analyzing the [recipe](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization) employed to customize stores using CSS, we can notice that several steps will be needed in order to apply your own style, such as:
 
-1. Criar um novo arquivo dentro da pasta `CSS` com o nome `vtex.{AppName}.css`
-2. Usar o CSS Handle do componente que será customizado dentro deste arquivo seguindo o formato abaixo:
+1. Create a new file in the `CSS` folder, naming it `vtex.{AppName}.css`
+2. Use the CSS Handle of the component that will be customized in this file in the following format: 
 
 ```css
 .{CSSHandle} {
@@ -26,8 +26,8 @@ Analisando a [recipe](https://vtex.io/docs/recipes/style/using-css-handles-for-s
 }
 ```
 
-3. Na falta de CSS Handles, aplicar CSS Selectors permitidos, como é o caso do `:global(vtex-{componentName})`.
-4. Para aplicar CSS em um bloco específico e não a todos os blocos daquele tipo, usa-se o recurso de blockClass, que aparece ao lado dos handles de css ao inspecionar seu código. As blockClass devem ser declaradas como uma prop no bloco em questão, e então referenciado no arquivo de estilo como mostrado abaixo:
+3. Lacking CSS Handles, apply permitted CSS Selectors, such as `:global(vtex-{componentName})`.
+4. To apply CSS to a specific block and not to every block of that type, use the blockClass resource, which appears next to the CSS Handles when inspecting your code. The blockClass must be declared as a prop in the block in question, and thus be referenced in the style file as shown below:
 
 ```css
 .{CSSHandle}--{blockClass} {
@@ -36,11 +36,11 @@ Analisando a [recipe](https://vtex.io/docs/recipes/style/using-css-handles-for-s
 }
 ```
 
-## Customizando o Info Card
+## Customizing the Info Card
 
-Para descobrir os CSS Handles de um componente, como o Info Card, basta acessar a sessão `Customization` da sua documentação.
+To uncover a component's CSS Handles, such as the Info Card, simply access your documentation's `Customization` section.
 
-De acordo com a descrição dos CSS Handles e com a recipe customizações de loja por CSS, conseguimos implementar um exemplo de Info Card customizado, alterando seu título e as configurações do botão call to action ao adicionar o código a seguir no arquivo `vtex.store-components.css` dentro de `/styles/css`:
+According to the description of CSS Handles and to the store customization recipe using CSS, we can implement a customized Info Card example, editing its title and call-to-action button configurations by adding the following code to the  `vtex.store-components.css` file, found in `/styles/css`:
 
 ```css
 .infoCardHeadline {
@@ -65,11 +65,11 @@ De acordo com a descrição dos CSS Handles e com a recipe customizações de lo
 }
 ```
 
-Você pode conferir o efeito das mudanças feitas por você executando o comando `vtex link`.
+You can check the effect of these changes by running the `vtex link` command.
 
 ![image](https://user-images.githubusercontent.com/12139385/70145123-2626f880-167e-11ea-97f4-65aaacba74c3.png)
 
-Em seguida, vamos adicionar um estilo específico para o infocard Vintage.  Para começar, adicione a prop `blockClass` no `info-card#button-right` como mostrado abaixo:
+Next, we'll add a specific style to the vintage info card. To begin, add the `blockClass`prop to `info-card#button-right`, as shown below:
 
 ```json
 "info-card#button-right": {
@@ -88,7 +88,7 @@ Em seguida, vamos adicionar um estilo específico para o infocard Vintage.  Para
 }
 ```
 
-E então declare uma `background-color` para este infocard específico no seu arquivo de css:
+Thereafter, declare a `background-color` for this specific info card in your CSS file:
 
 ```css
 .infoCardContainer--vintage {
@@ -96,30 +96,30 @@ E então declare uma `background-color` para este infocard específico no seu ar
 }
 ```
 
-Observe o efeito atingido linkando sua app.
+Check out the result by linking your app.
 
 ![image](https://user-images.githubusercontent.com/12139385/70145268-743bfc00-167e-11ea-9dca-070d444b16b5.png)
 
-## Atividade
+## Activity
 
-1. No arquivo `vtex.store-components.css`, copie o código acima para usá-lo no arquivo CSS do seu tema, seguindo a [recipe](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization) sobre customizações de loja por CSS;
-2. Com base nos Handles do [**Info Card**](https://vtex.io/docs/components/all/vtex.store-components/info-card), defina a largura máxima (`max-width`) de de todos os infocards para `1260px`, a margin para `0 auto` e o padding para `0`.
-3. Mude a cor do título do componente para `black`;
-4. Coloque o título em negrito (`bold`);
-5. Mude a cor de fundo do botão durante o hover para `white`.
-6. Paralelamente ao blockClass `vintage`, aplique um novo block class chamado `metal` no infocard `info-card#button-left` e aplique a cor de fundo `#e1e1e1`nele.
+1. In the `vtex.store-components.css` file, copy the above-mentioned code and use it in your theme's CSS file, according to the [recipe](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization) on store customizations using CSS; 
+2. Based on the [**Info Card**](https://vtex.io/docs/components/all/vtex.store-components/info-card) Handles, define a maximum width (`max-width`) of `1260px` for all info cards, a margin of `0 auto` and a padding of `0`.
+3. Change the component's title color to `black`;
+4. Put the title in `bold`;
+5. Change the background color during hover to `white`.
+6. In parallel to the `vintage` blockClass, apply a new block class called `metal` to the info card `info-card#button-left` and apply the `#e1e1e1` background color to it.
 
 ![image](https://user-images.githubusercontent.com/12139385/70145478-ead8f980-167e-11ea-8951-5d4b98e6d5c0.png)
 
 ---
 
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=CSS+handles+e+o+poder+da+customiza%C3%A7%C3%A3o+de+blocos) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=CSS+handles+e+o+poder+da+customiza%C3%A7%C3%A3o+de+blocos) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3) to go through that step again.

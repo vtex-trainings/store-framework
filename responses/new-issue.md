@@ -1,4 +1,4 @@
-# Você terminou este passo com sucesso! 
+# You have successfully completed this step! 
 
-## Vá para o próximo passo:
+## Go to the next step:
 [{{ nextName }}]({{ nextIssue }})

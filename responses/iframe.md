@@ -1,20 +1,20 @@
-# Inserindo um Iframe na nossa página institucional
+# Inserting an Iframe on our about us page
 
 ## :sparkles: **Branch:** iframe
 
-## Introdução
+## Introduction
 
-Um *Iframe* é um elemento HTML que permite a incorporação de uma outra página HTML à atual. Dessa forma, a partir do bloco [**Iframe**](https://vtex.io/docs/components/all/vtex.iframe/) é possível embutir conteúdos de outras URLs para serem exibidos em nossa página. É importante lembrar que as URLs renderizadas pelo Iframe possuem um contexto próprio, tendo histórico de sessão e DOM independentes da sua página customizada.
+An *Iframe* is a HTML element that allows the incorporation of another HTML page to the current one. Therefore, using the [**Iframe**](https://vtex.io/docs/components/all/vtex.iframe/) block, you can embed content from other URLs and display them on your page. It's important to remember that URLs rendered by Iframe have their own context, with independent session history and DOMs. 
 
-**ATENÇÃO**: Iframes só são permitidos dentro de templates de custom pages.
+**WARNING**: Iframes are only allowed on custom page templates.
 
-O bloco `iframe` tem propriedades bem simples:
+The `iframe` block has very simple properties:
 
-- `src`: indica qual URL o iframe deve renderizar
-- `width`: largura do elemento iframe em pixels
-- `height`: altura do elemento iframe
+- `src`: shows which URL should be rendered by the iframe
+- `width`: pixel width of the iframe element
+- `height`: height of the iframe element
 
-Abaixo, vemos um exemplo de implementação do bloco `iframe`:
+Below, we can see an implementation example of the `iframe` block:
 
 ```json
 "store.custom#about-us": {
@@ -33,27 +33,28 @@ Abaixo, vemos um exemplo de implementação do bloco `iframe`:
 }
 ```
 
-## Atividade
+## Activity
 
-Vamos exibir um post de Instagram em nossa loja:
+Let's display an Instagram post on your store page:
 
-1. Troque a label da aba "Electronics" para "Instagram";
-2. No conteúdo da aba Instagram, apague o `rich-text` e inclua um bloco `iframe`;
-3. Nas props do `iframe`, exiba o conteúdo do link `https://www.instagram.com/p/B37Zfd6FobU/embed` num container de 800px de largura por 1000px de altura.
+1. Change the label of the "Electronics" tab to "Instagram";
+2. In the Instagram tab's content, delete the `rich-text` and include an `iframe` block;
+3. In the `iframe` props, display the following link content in a 800px-wide by 1000px-high container: `https://www.instagram.com/p/B37Zfd6FobU/embed`
 
-:information_source: Lembre-se de acessar a documentação do [Iframe](https://vtex.io/docs/components/all/vtex.iframe/) caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the [Iframe documentation](https://vtex.io/docs/components/all/vtex.iframe/) if you have any questions during this activity.
 
-Resultado esperado:
+Expected result:
 ![](https://appliancetheme.vteximg.com.br/arquivos/imagem-iframe.png)
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Inserindo+um+Iframe+na+nossa+p%C3%A1gina+institucional) 
+Any problems with this step? How about sending us feedback? :pray:
+
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Inserindo+um+Iframe+na+nossa+p%C3%A1gina+institucional) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

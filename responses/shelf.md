@@ -1,18 +1,18 @@
-# Prateleira de produtos
+# Product shelf
 
 ## :sparkles: **Branch:** shelf
 
-## Introdução
+## Introduction
 
-O próximo bloco que vamos utilizar é a Shelf, a nossa prateleira para uma coleção de produtos. Nessa sessão vamos aprender a renderizar e configurar essa prateleira na home da nossa loja.
+The next block that we'll use is the Shelf, on which we display a product collection. This session will show you how to render and configure this shelf on your store's homepage. 
 
 ## Shelf
 
-Analisando a documentação da [Shelf](https://vtex.io/docs/app/vtex.shelf), vemos que é possível configurar qual coleção de produtos queremos mostrar através das props `category`, `specificationFilters` ou `collection`, de acordo com os produtos cadastrados no catálogo.
+After a closer look at the [Shelf](https://vtex.io/docs/app/vtex.shelf) documentation, we see that it's possible to configure which product collection we want to have displayed using either `category`, `specificationFilters` or `collection` props, according to the products added in the catalog. 
 
-As demais props são para configuração na maneira com que os items são mostrados. É importante notar que o componente `shelf` sempre pede que block do tipo `product-summary` faça parte da sua composição. Veja a [documentação](https://vtex.io/docs/components/product/vtex.product-summary) do bloco product-summary para entender mais sobre seu funcionamento
+Other props help to configure how the items are displayed. It's important to remember that the `shelf` component always requests that `product-summary` type blocks be part of its composition. Check out the product-summary block's [documentation](https://vtex.io/docs/components/product/vtex.product-summary) for more info on how it functions. 
 
-Abaixo, temos o exemplo da implementação de uma Shelf:
+Below, we have a Shelf implementation example:
 
 ```json
 {
@@ -54,29 +54,30 @@ Abaixo, temos o exemplo da implementação de uma Shelf:
 }
 ```
 
-## Atividade
+## Activity
 
-1. No arquivo `home.jsonc`, declare um componente `shelf` no template `store.home`
-2. Dentro da pasta blocks, crie um arquivo `shelf.jsonc`
-3. No arquivo `shelf.jsonc`, defina o bloco `shelf` com todas as props propostas no exemplo acima
-4. Altere o número máximo de itens exibidos para `8`
-5. Altere o número de itens por página para `4`
+1. In `home.jsonc`, declare a `shelf` component is the `store.home` template;
+2. Inside the blocks folder, create a `shelf.jsonc` file;
+3. In `shelf.jsonc`, define the `shelf` block with all the props given in the example above; 
+4. Change the maximum number of displayed items to `8`
+5. Change the number of items per page to `4`
 
-Obs.: É importante notar que o bloco `product-summary.shelf` já está declarado dentro do arquivo `default.jsonc`. Por este motivo, não foi necessário declará-lo nesta atividade.
+Note: It's important to remember that the `product-summary.shelf` block is already declared in `default.jsonc`. Therefore, it wasn't necessary to declare it during this activity.
 
-:information_source: Lembre-se de acessar a [documentação](https://vtex.io/docs/app/vtex.shelf) da Shelf caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the Shelf's [documentation](https://vtex.io/docs/app/vtex.shelf) if you have any questions during this activity.
 
-O resultado final esperado deve ser semelhante a este:
+The end result should be similar to the one below:
 ![image](https://user-images.githubusercontent.com/12139385/70187041-1209e800-16cc-11ea-85b8-80162239ce1d.png)
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Prateleira+de+produtos) 
+Any problems with this step? How about sending us feedback? :pray:
+
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Prateleira+de+produtos) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

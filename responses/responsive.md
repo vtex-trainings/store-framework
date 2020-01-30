@@ -1,20 +1,20 @@
-# Tornando seu conteúdo responsivo
+# Making your content responsive
 
 ## :sparkles: **Branch:** responsiveimage
 
-## Introdução
+## Introduction
 
-A página inicial de um e-commerce é sempre o primeiro contato do cliente com a marca. Por isso, é comum que o lojista queira estabelecer uma **comunicação direta** com os seus usuários nesse momento estratégico da navegação.
+An e-commerce's homepage is always the client's first contact with the brand. Therefore, it's common for retailers to want to establish **direct communication** with their users at this strategic point in time during navigation.
 
-No Store Framework, existem alguns componentes que atendem a esse cenário, como o [Info Card](https://vtex.io/docs/components/all/vtex.store-components/info-card) visto nos passos anteriores e o [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/).
+Several components in Store Framework serve this scenario, such as the [Info Card](https://vtex.io/docs/components/all/vtex.store-components/info-card), which we looked at previously, and the [**Rich Text**](https://vtex.io/docs/components/all/vtex.rich-text/).
 
-Como vimos no [terceiro passo](https://github.com/{{ user.username }}/store-framework/issues/3), o Rich Text é responsável por transformar textos em elementos HTML, com a grande vantagem de ler em [**Markdown**](https://www.markdownguide.org/). Isso dá ao componente a flexibilidade de aceitar diferentes estruturas de texto, permitindo ao lojista construir sua comunicação de forma mais clara e direta.
+As we have seen during [step three](https://github.com/{{ user.username }}/store-framework/issues/3), the Rich Text is responsible for transforming texts into HTML elements, having the big advantage of reading [**Markdown**](https://www.markdownguide.org/). This give the component the flexibility to accept various text structures, allowing retailers to build their communication in more direct and clear way. 
 
-## Configurando o Rich Text
+## Configuring the Rich Text
 
-Assim como a sua funcionalidade, a configuração do Rich Text também é simples.
+Just as with its functionality, the Rich Text configuration is also simple.
 
-Da mesma forma que o "**Hello, world!**" foi feito, podemos montar um exemplo de implementação do bloco usando texto escrito em markdown. Por exemplo:
+The same way that "**Hello, world!**" was created, we can create a block implementation example using written text in markdown format. For example:
 
 ```json
 "rich-text": {
@@ -26,20 +26,18 @@ Da mesma forma que o "**Hello, world!**" foi feito, podemos montar um exemplo de
 },
 ```
 
-Como falado anteriormente, o uso de Markdown permite flexibilidade ao componente. Mas, por outro lado, também pode fazer com que a sua renderização sofra alterações de acordo com o dispositivo usado pelo usuário.
+As previously stated, using Markdown allows for more component flexibility. However, it may also lead to your alteration in your rendering, according to the device used by the user.
 
-Por exemplo: a frase acima ( `# Your Coffee, Your Way \n ### New Coffee Makers Collection` ) pode usar um markdown adequado para desktop, mas não necessariamente para mobile (cujo tamanho de tela é menor).
+For example: the above sentence ( `# Your Coffee, Your Way \n ### New Coffee Makers Collection` ) can be use a markdown that's suitable for desktop, but not necessarily for mobile as well (whose screen size is smaller). 
 
-Para resolver esse cenário e tornar o componente mais adaptável a outros dispositivos, devemos usar o [**Responsive Layout**](https://vtex.io/docs/components/layout/vtex.responsive-layout).
+To resolve this scenario and make the behavior more adaptable to other devices, we should use the [**Responsive Layout**](https://vtex.io/docs/components/layout/vtex.responsive-layout).
 
-
-Primeiramente devemos delcarar os blocos dentro do template `store.home`:
+First, we must declare the blocks in the `store.home` template:
 
 `"responsive-layout.desktop#desktop",
  "responsive-layout.mobile#mobile"`
 
-
-Em seguida devemos declarar esses blocos da seguinte forma:
+Them, we must declare these blocks as follows: 
 
 ```json
 
@@ -70,11 +68,11 @@ Em seguida devemos declarar esses blocos da seguinte forma:
 }
 ```
 
-Ao interpretar o código acima, perceba como duas configurações de Rich Text são construídas a partir do uso de `responsive-layout.desktop#desktop` e `responsive-layout.mobile#mobile`. 
+As we interpret the code above, we can notice two Rich Text configurations, built based on `responsive-layout.desktop#desktop` and `responsive-layout.mobile#mobile`. 
 
-## Atividade
+## Activity
 
-Nessa atividade, vamos brincar um pouco com o markdown do [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) e aprender a usá-lo com o componente [Image](https://vtex.io/docs/components/all/vtex.store-components/image). Tudo isso usando o Responsive Layout, é claro!
+During this activity, we will play around a little with the [Rich Text](https://vtex.io/docs/components/all/vtex.rich-text/) markdown and learn how to use it with the [Image](https://vtex.io/docs/components/all/vtex.store-components/image) component. All the while using Responsive Layout, of course!
 
 ### Desktop:
 
@@ -84,10 +82,10 @@ Nessa atividade, vamos brincar um pouco com o markdown do [Rich Text](https://vt
 
 ![image](https://user-images.githubusercontent.com/12139385/70152883-bf5d0b80-168c-11ea-81e0-25be5ed3d5ce.png)
 
-1. Adicione o código proposto acima no arquivo `home.jsonc` e declare os blocos de `responsive-layout` no template `store.home`;
-2. No `rich-text#mobile`, altere o markdown da primeira frase para `h3` e da segunda para `h4`;
-3. Adicione `image#desktop` como children de `responsive-layout.desktop#desktop`. Faça o mesmo com `image#mobile`  em `responsive-layout.mobile#mobile`;
-4. Declare os seguintes blocos de Image:
+1. Add the code given above to `home.jsonc` and declare the `responsive-layout` block in the `store.home` template;
+2. In `rich-text#mobile`, alter the markdown of the first sentence to `h3` and of the second to `h4`;
+3. Add `image#desktop` as a child of `responsive-layout.desktop#desktop`. Repeat the process with `image#mobile` and `responsive-layout.mobile#mobile`;
+4. Declare the following Image blocks:
 
 ```json
 "image#desktop": {
@@ -111,18 +109,18 @@ Nessa atividade, vamos brincar um pouco com o markdown do [Rich Text](https://vt
 },
 ```
 
-5. Analisando as props do [componente Image](https://vtex.io/docs/components/general/vtex.store-components/image), defina a largura máxima das duas imagens como `100%`.
+5. When analyzing the [componente Image](https://vtex.io/docs/components/general/vtex.store-components/image) props, set the two images' max width to `100%`.
 
-:information_source: Lembre-se de acessar a [documentação]((https://vtex.io/docs/components/layout/vtex.responsive-layout)) do Responsive Layout caso tenha alguma dúvida durante a atividade.
+:information_source: Remember to access the Responsive Layout [documentation]((https://vtex.io/docs/components/layout/vtex.responsive-layout)) if you have any question during your activity.
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
+Any problems with this step? How about sending us feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Tornando+seu+conte%C3%BAdo+responsivo) 
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Tornando+seu+conte%C3%BAdo+responsivo) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

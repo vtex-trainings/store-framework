@@ -1,30 +1,30 @@
-# Finalizando sua pdp
+# Finishing your pdp
 
 ## :sparkles: **Branch:** pdp3
 
-## Introdução
+## Introduction
 
-Neste passo vamos terminar de montar a nossa página de produto. Aprenderemos como empilhar blocos usando o [**Stack Layout**](https://vtex.io/docs/app/vtex.stack-layout), como sugerir produtos similares e como customizar melhor o SKU Selector para produtos com imagem de SKU.
+In this step we'll finish setting up our product page. We've learned how to stack blocks using [**Stack Layout**](https://vtex.io/docs/app/vtex.stack-layout), and we've also learned how to suggest similar product and better customize the SKU Selector for products with SKU images. 
 
-Para testar este step, utilize a url do produto `/3-colors-retro-stand-mixer/p`.
+Use the following product URL to test this step: `/3-colors-retro-stand-mixer/p`.
 
 ![image](https://user-images.githubusercontent.com/18701182/69393219-50a8a700-0cb7-11ea-8718-c5ec0536cbe2.png)
 
 ## Stack Layout
 
-O `stack-layout` é um tipo layout que possibilita que blocos possam ser empilhados sobre outros. É muito útil quando se deseja colocar algum badge em cima de uma imagem ou produto. Também é útil para compor textos compostos sobre imagens (usando um `rich-text` e uma `image`).
+`stack-layout` is a type of layout that allows blocks to stack on top of others. It comes in handy when you want to a badge on top of an image or product. It's also useful when placing rich text onto images (using a `rich-text` and an `image`).
 
 ![image](https://user-images.githubusercontent.com/18701182/69392819-0a9f1380-0cb6-11ea-8238-1e2e75b9eee9.png)
 
-(Na imagem, uma shelf empilhada sobre um carrossel :point_up_2:)
+(In the image, a shelf is stacked on top a carrossel :point_up_2:)
 
-Neste passo, usaremos o `stack-layout` para colocar a marca sobre as imagens de produto.
+In this step, we'll use `stack-layout` to place the brand on top of product images.
 
-## Atividade
+## Activity
 
-Evolua a página de produto adicionando os passos abaixo ao arquivo `product.jsonc`:
+Develop the product page by adding the step below to `product.jsonc`:
 
-1. Declare um [`shelf.relatedProducts`](https://vtex.io/docs/app/vtex.shelf) abaixo da **linha principal** de produto
+1. Declare a [`shelf.relatedProducts`](https://vtex.io/docs/app/vtex.shelf) under the product's **main line**
 
 ```json
 "store.product": {
@@ -36,9 +36,9 @@ Evolua a página de produto adicionando os passos abaixo ao arquivo `product.jso
 }
 ```
 
-:warning: Lembre-se, esta prateleira de produtos aparece somente no produto `/3-colors-retro-stand-mixer/p`.
+:warning: Remember, this product shelf is only displayed for the `/3-colors-retro-stand-mixer/p` product.
 
-2. Troque `product-images` na coluna da esquerda por uma declaração de `stack-layout`;
+2. From  the left column, change `product-images` with a `stack-layout` declaration;
 
 ```json
 "flex-layout.col#left": {
@@ -48,7 +48,7 @@ Evolua a página de produto adicionando os passos abaixo ao arquivo `product.jso
 }
 ```
 
-3. Defina o `stack-layout` e coloque como filhos o `product-images` e [`product-brand`](https://vtex.io/docs/components/product-related/vtex.store-components/product-brand);
+3. Define `stack-layout` and set `product-images` and [`product-brand`](https://vtex.io/docs/components/product-related/vtex.store-components/product-brand) as children;
 
 ```json
 "stack-layout#brand": {
@@ -59,25 +59,26 @@ Evolua a página de produto adicionando os passos abaixo ao arquivo `product.jso
 }
 ```
 
-4. Consulte a [documentação](https://vtex.io/docs/components/product/vtex.store-components/product-brand#configuration) para mudar a forma que o `product-brand` é exibido. Você deve fazer o logo aparecer com altura de **30** e incluir a prop `displayMode: "logo"`. 
+4. Consult the [documentation](https://vtex.io/docs/components/product/vtex.store-components/product-brand#configuration) to change the way in which `product-brand` is displayed. You should make the logo appear with a height of **30** and include the `displayMode: "logo"` prop. 
 
-5. Consulte a [documentação](https://vtex.io/docs/components/product/vtex.store-components/sku-selector) para fazer com que o `sku-selector`: 
-  - comece sem nenhum SKU selecionado;
-  - mostre o nome por variação de sku;
-  - mostre erro se nenhuma variação de sku for selecionada.
+5. Review the [documentation](https://vtex.io/docs/components/product/vtex.store-components/sku-selector) to make the `sku-selector` do the following: 
+  - start without any selected SKU;
+  - show the name by SKU variation;
+  - display an error message if no SKU variation was selected.
   
-  :information_source: Lembre-se de acessar a [documentação](https://vtex.io/docs/app/vtex.stack-layout) do Stack Layout caso tenha alguma dúvida durante a atividade.
+  :information_source: Remember to read through the Stack Layout [documentation](https://vtex.io/docs/app/vtex.stack-layout) if you have any questions during the activity.
 
-:information_source: Lembre-se de utilizar o produto `/3-colors-retro-stand-mixer/p` para testar este passo.
+:information_source: Remember to use the `/3-colors-retro-stand-mixer/p` product to test this step. 
 
 ---
 
-### :no_entry_sign: Perdido? 
+### :no_entry_sign: Lost? 
 
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
 
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Finalizando+sua+pdp) 
+Any problems with this step? How about sending us feedback? :pray:
+
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Finalizando+sua+pdp) 
 
 ----
 
-Se ainda tiver dúvida sobre como enviar sua resposta, você pode rever [aqui](https://github.com/{{ user.username }}/store-framework/issues/3).
+If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

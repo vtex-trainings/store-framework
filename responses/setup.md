@@ -1,75 +1,76 @@
-# Configurações básicas
+# Basic configurations
 
 <a href="https://bit.ly/setup-vtex" target="_blank"><img src="https://user-images.githubusercontent.com/18701182/70204540-be18f680-16ff-11ea-994d-ef580767a673.png" 
 alt="IMAGE ALT TEXT HERE" width="600" height="360" border="10" /></a>
 
-> Para o vídeo de setup do Mac, [clique aqui](https://bit.ly/setup-vtex-mac)
+> For your Mac setup video, [click here](https://bit.ly/setup-vtex-mac)
 
-## Introdução 
+## Introduction 
 
-Antes de começar a botar a mão na massa e aprender mais sobre o Store Framework do VTEX IO, algumas configurações básicas precisam ser feitas por você, como:
+Before getting your hands dirty and learning more about VTEX IO's Store Framework, you'll need to set up a few basic configurations, such as:
 
-- Instalar o **Git**; 
-- Instalar o **Toolbelt**; 
-- Fazer **login** em uma conta VTEX;
-- Criar um **workspace** de desenvolvimento;
-- **Linkar** seus arquivos locais com a plataforma.
+- Installing **Git**; 
+- Installing **Toolbelt**; 
+- **Logging into** a VTEX account;
+- Creating a development **workspace**;
+- **Linking** your local files to the platform.
 
-Confira abaixo o passo a passo para cada uma dessas configurações:
+Have a look at the step-by-step below for each of these configurations:
 
-## Instalando o Git 
+## Installing Git 
 
-Instale o Git no seu computador acessando o link abaixo e selecionando o software usado pelo seu computador (Windows, MAC ou Linux):
+Install Git on your computer by clicking on the link below and selecting your operating system (Windows, MAC or Linux):
 
 [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 
-## Instalando o Toolbelt
+## Installing Toolbelt
 
-O **Toolbelt** é a ferramenta de **linha de comando** do VTEX IO. É ele quem permite a realização de qualquer atividade na plataforma, como criar um novo workspace de desenvolvimento, fazer login em uma conta VTEX, desenvolver novas apps, gerenciar as já existentes, etc.
+**Toolbelt** is a VTEX **command line** tool. It allows you to perform any activity on the platform, such as creating a new development workspace, logging into a VTEX account, developing new apps, or managing already existing ones, etc.
 
-Uma vez que o Toolbelt é quem estabelece a comunicação entre o desenvolvedor e a plataforma, você precisará dele para conseguir realizar todas as atividades propostas durante o curso do Store Framework. 
+Since it's Toolbelt that establishes the communication between the developer and the platform, you'll need it in order to perform all the activities put forward during the Store Framework course. 
 
-1. Instale o [**Node.js**](https://nodejs.org/). Se o computador que você está usando é MAC, instale também o [**Yarn**](https://yarnpkg.com/);
-2. Execute o comando `npm i -g vtex` no seu terminal se você estiver trabalhando de um Windows e `yarn global add vtex` no MAC;
+1. Install [**Node.js**](https://nodejs.org/). If you are using a MAC, also install [**Yarn**](https://yarnpkg.com/);
+2. Run `npm i -g vtex` in your terminal if you're using Windows or `yarn global add vtex` if you're using MAC;
 
-Você pode executar o comando `vtex-v` (Windows) ou `vtex` (MAC) para confirmar se a instalação do Toolbelt ocorreu como esperado. 
+Your can run `vtex-v` (Windows) or `vtex` (MAC) to confirm whether the Toolbelt installation was as expected.
 
-Com a instalação concluída, o seu próximo passo deve ser *logar* em uma conta VTEX. 
+Once successfully installed, your next step is to *log into* a VTEX account. 
 
-## Fazendo login 
+## Logging in
 
-1. Execute o comando `vtex login contaVTEX` no seu terminal, substituindo `contaVTEX` pelo nome real da conta em que você deseja trabalhar. Por exemplo, `vtex login appliancetheme`.
+1. Run `vtex login VTEXaccount` in your terminal, replacing `VTEXaccount` with the name of the account in which you want to work. For example, `vtex login appliancetheme`.
 
-2. Uma vez *logado*, execute o comando `vtex whoami` para confirmar em qual conta e workspace você está. 
+2. After *logging in*, run `vtex whoami` to confirm the account and workspace in which you find currently are.
 
-Workspaces nada mais são do que espaços de trabalho. Na plataforma do VTEX IO, as contas possuem três tipos principais de workspaces: [master](https://vtex.io/docs/recipes/store/promoting-a-workspace-to-master), de [produção](https://vtex.io/docs/recipes/store/creating-a-production-workspace) e desenvolvimento. 
+Workspaces are nothing other than what the namesake suggests. On VTEX IO, accounts have three main workspace types, namely [master](https://vtex.io/docs/recipes/store/promoting-a-workspace-to-master), [production](https://vtex.io/docs/recipes/store/creating-a-production-workspace) and development. 
 
-O próximo passo irá fazer com que um workspace de desenvolvimento seja criado para você, permitindo que as configurações feitas nas atividades do curso não alterem a versão final pública da loja. 
+The next step is to create a development workspace, which will allow you to play with the configurations throughout the course without altering the store's final public version.
 
-## Criando um workspace de desenvolvimento
+## Creating a development workspace 
 
-1. Execute `vtex use nome-do-workspace`, substituindo `nome-do-workspace` pelo nome desejado. Por exemplo, `vtex use devworkspace`.
+1. Run `vtex use workspace-name`, replacing `workspace-name` with the desired name. For example, `vtex use devworkspace`.
 
-### Visualizando seu workspace
+### Accessing your workspace
 
-Depois que seu workspace foi criado, você conseguirá acessá-lo a partir do link `https://{workspace}--{conta}.myvtex.com`, substituindo `{workspace}` e `{conta}` pelo workspace criado anteriormente e pelo nome da conta, respectivamente. Por exemplo, `https://devworkspace--appliancetheme.myvtex.com`
+After creating the workspace, you'll be able to access it at this link: `https://{workspace}--{account}.myvtex.com`, replacing `{workspace}` and `{conta}` with the name of the previously created workspace and account. For example, `https://devworkspace--appliancetheme.myvtex.com`
 
-## Linkando seus arquivos locais
+## Linking your local files
 
-Ao executar `vtex link` a partir da pasta onde estão os arquivos do seu tema, eles passarão a ser automaticamente sincronizados com a plataforma do VTEX IO. Isso significa que qualquer alteração feita e salva por você será refletida no workspace e na conta em que você está *logado*, e poderá ser visualizada através do endereço descrito acima.
-
----
-
-
-### :no_entry_sign: Perdido? 
-
-Há algum problema com esse passo? Que tal nos enviar um feedback? :pray:
-
-[Criar feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Configura%C3%A7%C3%B5es+b%C3%A1sicas) 
+Run `vtex link` from the folder that contains your theme files and these will be automatically synced with the VTEX IO platform. This means that any change you do and save will be reflected in the workspace and account in which your are logged in, and can be seen by accessing the above mentioned link. 
 
 ---
 
-Com todas as configurações básicas concluídas, você está pronto pra começar o curso! 
 
-## Para continuar clique em Close Issue
+### :no_entry_sign: Lost? 
+
+
+Any problems with this step? How about sending us feedback? :pray:
+
+[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Configura%C3%A7%C3%B5es+b%C3%A1sicas) 
+
+---
+
+After setting up the basic configurations, you're ready to start the course!
+
+## Click on Close Issue to continue
