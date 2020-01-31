@@ -6,6 +6,18 @@ description: >-
 template:
   repo: store-framework-template
   name: store-framework
+preferences:
+  - type: dropdown
+    name: language
+    label: Language
+    description: Choose your preferred language.
+    options:
+    - label: English
+      value: en
+    - label: Español
+      value: es
+    - label: Português
+      value: pt
 before:
   - type: createIssue
     title: Basic configurations
