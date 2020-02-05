@@ -49,14 +49,6 @@ The query schema is one of the [custom query search result props](https://vtex.i
   - Uses "Blue Top Retro Camera" as *query*;
   - Uses `ft` as mapField.
 
----
-
-### :no_entry_sign: Lost? 
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Construindo+uma+landing+customizada+de+busca) 
-
 ----
 
 If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

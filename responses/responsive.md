@@ -113,14 +113,6 @@ During this activity, we will play around a little with the [Rich Text](https://
 
 :information_source: Remember to access the Responsive Layout [documentation]((https://vtex.io/docs/components/layout/vtex.responsive-layout)) if you have any question during your activity.
 
----
-
-### :no_entry_sign: Lost? 
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Tornando+seu+conte%C3%BAdo+responsivo) 
-
 ----
 
 If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

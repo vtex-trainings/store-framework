@@ -39,13 +39,6 @@ The process to discovering text semantics with editable fields is the same as th
 ![](https://user-images.githubusercontent.com/18701182/69850673-8b35b500-125e-11ea-824b-3f3f3235e575.png) 1. In `style.json`, replace every color occurrence that you find, substituting: - **#072c75** with **#45a6a3** - **#0F3E99** with **#52BAB7** 
 2. Change the font size for a level 1 heading so that its height is now 2.5 rem 
 
---- 
-
-### :no_entry_sign: Lost? 
-
-Any problems with this step? How about sending us feedback? :pray:
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Estilos+globais) 
-
 ---- 
 
 If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

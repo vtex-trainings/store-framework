@@ -103,15 +103,6 @@ Anytime you open the VSCode terminal, you can run a `vtex link` to monitor the e
 
 Do not create issues and PRs during the course flow, since this can interfere with its functioning. 
 
----
-
-
-### :no_entry_sign: Lost? 
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Funcionamento+do+curso) 
-
 ----
 
 ## To continue, click on **Close issue**

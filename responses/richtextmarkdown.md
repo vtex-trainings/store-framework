@@ -52,14 +52,6 @@ Expected result:
 
 :information_source: Remember to access the Rich Text [documentation](https://vtex.io/docs/components/all/vtex.rich-text/) if you have any questions during the activity.
 
----
-
-### :no_entry_sign: Lost? 
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Explorando+o+poder+do+rich+text) 
-
 ----
 
 If you're still unsure as to how to send your answers, click [here](https://github.com/{{user.username}}/store-framework/issues/2) 
