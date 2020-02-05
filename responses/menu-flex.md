@@ -13,7 +13,7 @@ With this in mind, we can improve the previous activity's [Menu](https://vtex.io
 According to what we did in the last activity and what was learned about Flex Layout, let's apply Flex Layout to the *Major Appliances* submenu. 
 
 1. In the `menu.jsonc` file, replace `vtex.menu@2.x:menu#major` with `flex-layout.row#major` in the *children* list pertaining to the `vtex.menu@2.x:submenu#major` block;
-2. Them, define the following `flex-layout.row#major` block: 
+2. Create a new file `menu-flex.jsonc` and then define the following `flex-layout.row#major` block: 
 
 ```json
 ...

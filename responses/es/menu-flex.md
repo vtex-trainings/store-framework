@@ -13,7 +13,7 @@ A partir de este entendimiento, podemos mejorar la configuración del [Menú](ht
 De acuerdo con lo que se practicó en la actividad anterior y lo que se aprendió sobre Flex Layout, apliquemos Flex Layout en el Submenú de *Major Appliance*.
 
 1. En el archivo `menu.jsonc`, reemplace `vtex.menu@2.x:menu#major` por `flex-layout.row#major` en la lista de *children* del bloque  `vtex.menu@2.x:submenu#major` .
-2. Luego, defina  el bloque `flex-layout.row#major`: 
+2. Crea el archivo `menu-flex.jsonc` e luego, defina  el bloque `flex-layout.row#major`: 
 
 ```json
 ...

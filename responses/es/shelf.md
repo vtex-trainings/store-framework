@@ -69,6 +69,10 @@ Nota: Es importante tener en cuenta que el bloque `product-summary.shelf`  ya es
 El resultado final esperado debe ser semejante a este:
 ![image](https://user-images.githubusercontent.com/12139385/70187041-1209e800-16cc-11ea-85b8-80162239ce1d.png)
 
+## Solucionar problemas
+
+Si estas utilizando su propia cuenta VTEX, asegúrese de que la categoría `1` sea funcional y activa.
+
 ---
 
 ### :no_entry_sign: ¿Perdido? 
