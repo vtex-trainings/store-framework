@@ -26,15 +26,6 @@ Blocks are the minimal abstraction in Store Framework. They declare small pieces
 
 Secure work environments that show a very close copy of what is running in production, allowing themes to be developed further without affecting the store. 
 
----
-
-### :no_entry_sign: Lost? 
-
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Store+Framework+101) 
-
 ----
 
 ## Click on **Close issue** to continue

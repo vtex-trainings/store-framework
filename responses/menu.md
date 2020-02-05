@@ -27,12 +27,8 @@ This activity will help us understand more about configuring the [Menu\](https:/
 
 :information\_source: Remember to access the Menu's [documentação\](https://vtex.io/docs/components/all/vtex.menu/) if your have any questions during the activity. 
 
-Expected result: !\[\](https://appliancetheme.vteximg.com.br/arquivos/imagem-menu.png) --- 
+Expected result: !\[\](https://appliancetheme.vteximg.com.br/arquivos/imagem-menu.png)
 
-### :no\_entry\_sign: Lost? 
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp\_url&entry.1784529524=Menu) ---- 
+----
 
 If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).

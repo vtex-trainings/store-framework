@@ -61,16 +61,6 @@ Run `vtex link` from the folder that contains your theme files and these will be
 
 ---
 
-
-### :no_entry_sign: Lost? 
-
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Configura%C3%A7%C3%B5es+b%C3%A1sicas) 
-
----
-
 After setting up the basic configurations, you're ready to start the course!
 
 ## Click on Close Issue to continue

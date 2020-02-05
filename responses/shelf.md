@@ -74,15 +74,6 @@ The end result should be similar to the one below:
 
 In case you're using your own VTEX account, make sure that the category `1` is functional and active in your environment.
 
----
-
-### :no_entry_sign: Lost? 
-
-
-Any problems with this step? How about sending us feedback? :pray:
-
-[Send feedback](https://docs.google.com/forms/d/e/1FAIpQLSeaWrm0Hogm-txm5Ww6mUa68eDuE3WnpFjUSVJ3Wi3dnmCb7A/viewform?usp=pp_url&entry.1784529524=Prateleira+de+produtos) 
-
 ----
 
 If you're still unsure as to how to send your answers, click [here](https://github.com/{{ user.username }}/store-framework/issues/3).
