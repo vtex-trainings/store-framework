@@ -69,6 +69,11 @@ Note: It's important to remember that the `product-summary.shelf` block is alrea
 The end result should be similar to the one below:
 ![image](https://user-images.githubusercontent.com/12139385/70187041-1209e800-16cc-11ea-85b8-80162239ce1d.png)
 
+
+## Troubleshoot
+
+In case you're using your own VTEX account, make sure that the category `1` is functional and active in your environment.
+
 ---
 
 ### :no_entry_sign: Lost? 
