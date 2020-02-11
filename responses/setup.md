@@ -55,10 +55,6 @@ The next step is to create a development workspace, which will allow you to play
 
 After creating the workspace, you'll be able to access it at this link: `https://{workspace}--{account}.myvtex.com`, replacing `{workspace}` and `{conta}` with the name of the previously created workspace and account. For example, `https://devworkspace--appliancetheme.myvtex.com`
 
-## Linking your local files
-
-Run `vtex link` from the folder that contains your theme files and these will be automatically synced with the VTEX IO platform. This means that any change you do and save will be reflected in the workspace and account in which your are logged in, and can be seen by accessing the above mentioned link. 
-
 ---
 
 After setting up the basic configurations, you're ready to start the course!

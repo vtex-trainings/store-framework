@@ -50,10 +50,6 @@ El siguiente paso hará que se cree un workspace de desarrollo para usted, permi
 
 Una vez creado su workspace, podrá acceder a este desde el enlace `https://{workspace}--{cuenta}.myvtex.com`, reemplazando `{workspace}` y `{cuenta}` con el workspace creado anteriormente y el nombre de la cuenta, respectivamente. Por ejemplo, `https://devworkspace--appliancetheme.myvtex.com`
 
-## Enlazando sus archivos locales
-
-Al ejecutar `vtex link` a partir de la carpeta donde están los archivos de su tema, estos pasarán a ser automáticamente sincronizados con la plataforma de VTEX IO. Esto significa que cualquier alteración que usted haya realizado y guardado será reflejada en el workspace y en la cuenta en que usted esté  *conectado*, y podrá visualizarse a través de la dirección descrita anteriormente.
-
 ---
 
 
