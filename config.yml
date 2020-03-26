@@ -4,29 +4,27 @@ description: >-
   Learning how to build a store using the Store Framework blocks language,
   powered by VTEX IO.
 template:
-  repo: store-framework-template
   name: store-framework
+  repo: store-framework-template
 preferences:
   - type: dropdown
     name: language
     label: Language
     description: Choose your preferred language.
     options:
-    - label: English
-      value: en
-    - label: Español
-      value: es
-    - label: Português
-      value: pt
+      - label: English
+        value: en
+      - label: Español
+        value: es
+      - label: Português
+        value: pt
 before:
-  - type: createIssue
+  - body: setup.md
     title: Basic configurations
-    body: setup.md
+    type: createIssue
 steps:
   - title: Basic configurations
-    description: Store Framework development prerequisites 
-    event: issues.closed
-    link: '{{ repoUrl }}/issues/1'
+    description: Store Framework development prerequisites
     translations:
       es:
         title: Configuraciones básicas
@@ -34,19 +32,19 @@ steps:
       pt:
         title: Configurações básicas
         description: Pré-requisitos para desenvolver com o Store Framework
+    event: issues.closed
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: respond
         with: new-issue.md
         issue: 1
         data:
           nextIssue: '2'
-      - type: createIssue
+      - body: storeframework.md
         title: Store Framework 101
-        body: storeframework.md
+        type: createIssue
   - title: Store Framework 101
     description: Store Framework quick and introductory definitions
-    event: issues.closed
-    link: '{{ repoUrl }}/issues/2'
     translations:
       es:
         title: Store Framework 101
@@ -54,19 +52,19 @@ steps:
       pt:
         title: Store Framework 101
         description: Definições rápidas e introdutórias sobre o Store Framework.
+    event: issues.closed
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: respond
         with: new-issue.md
         issue: 2
         data:
           nextIssue: '3'
-      - type: createIssue
+      - body: course.md
         title: Course functioning
-        body: course.md
+        type: createIssue
   - title: Course functioning
     description: How to interact with the course
-    event: issues.closed
-    link: '{{ repoUrl }}/issues/3'
     translations:
       es:
         title: Funcionamiento del curso
@@ -74,19 +72,19 @@ steps:
       pt:
         title: Funcionamento do curso
         description: Explicando como interagir com o curso.
+    event: issues.closed
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: respond
         with: new-issue.md
         issue: 3
         data:
           nextIssue: '4'
-      - type: createIssue
+      - body: helloworld.md
         title: 'Hello, World!'
-        body: helloworld.md
+        type: createIssue
   - title: 'Hello, World!'
     description: Compose and reference your first block in Store Framework
-    event: status
-    link: '{{ repoUrl }}/issues/4'
     translations:
       es:
         title: 'Hello, World!'
@@ -94,6 +92,8 @@ steps:
       pt:
         title: 'Hello, World!'
         description: Componha e referencie seu primeiro bloco no Store Framework
+    event: status
+    link: '{{ repoUrl }}/issues/4'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -104,13 +104,11 @@ steps:
         issue: 4
         data:
           nextIssue: '5'
-      - type: createIssue
-        title: "Info Card: Store Framework's call to action"
-        body: infocard.md
-  - title: "Info Card: Store Framework's call to action"
+      - body: infocard.md
+        title: 'Info Card: Store Framework''s call to action'
+        type: createIssue
+  - title: 'Info Card: Store Framework''s call to action'
     description: Defining a block's call to action on our homepage
-    event: status
-    link: '{{ repoUrl }}/issues/5'
     translations:
       es:
         title: 'Info Card: el call to action de Store Framework'
@@ -118,6 +116,8 @@ steps:
       pt:
         title: 'Info Card: o call to action do Store Framework'
         description: Definiremos um bloco call to action na nossa home
+    event: status
+    link: '{{ repoUrl }}/issues/5'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -128,13 +128,11 @@ steps:
         issue: 5
         data:
           nextIssue: '6'
-      - type: createIssue
+      - body: csshandles.md
         title: CSS Handles and the power of customizing blocks
-        body: csshandles.md
+        type: createIssue
   - title: CSS Handles and the power of customizing blocks
     description: Customize the styles of your blocks
-    event: status
-    link: '{{ repoUrl }}/issues/6'
     translations:
       es:
         title: CSS Handles y el poder de la personalización de bloques
@@ -142,6 +140,8 @@ steps:
       pt:
         title: CSS handles e o poder da customização de blocos
         description: Personalize o estilo dos seus blocos
+    event: status
+    link: '{{ repoUrl }}/issues/6'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -152,13 +152,11 @@ steps:
         issue: 6
         data:
           nextIssue: '7'
-      - type: createIssue
+      - body: flexlayout.md
         title: 'Flex Layout: create layouts using the power of Flexbox'
-        body: flexlayout.md
+        type: createIssue
   - title: 'Flex Layout: create layouts using the power of Flexbox'
     description: Let's create complex layouts in a simple way
-    event: status
-    link: '{{ repoUrl }}/issues/7'
     translations:
       es:
         title: 'Flex Layout: cree layouts utilizando el poder de Flexbox'
@@ -166,6 +164,8 @@ steps:
       pt:
         title: 'Flex Layout: crie layouts utilizando o poder do Flexbox'
         description: Vamos criar layouts complexos de forma simples
+    event: status
+    link: '{{ repoUrl }}/issues/7'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -176,13 +176,11 @@ steps:
         issue: 7
         data:
           nextIssue: '8'
-      - type: createIssue
+      - body: shelf.md
         title: Product shelf
-        body: shelf.md
+        type: createIssue
   - title: Product shelf
     description: How to intuitively display a product window display
-    event: status
-    link: '{{ repoUrl }}/issues/8'
     translations:
       es:
         title: Estante de productos
@@ -190,6 +188,8 @@ steps:
       pt:
         title: Prateleira de produtos
         description: Como exibir uma vitrine de produtos de forma intuitiva
+    event: status
+    link: '{{ repoUrl }}/issues/8'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -200,13 +200,11 @@ steps:
         issue: 8
         data:
           nextIssue: '9'
-      - type: createIssue
+      - body: slider.md
         title: Blocks carousel
-        body: slider.md
+        type: createIssue
   - title: Blocks carousel
     description: Insert content into a carousel layout
-    event: status
-    link: '{{ repoUrl }}/issues/9'
     translations:
       es:
         title: Carrusel de bloques
@@ -214,6 +212,8 @@ steps:
       pt:
         title: Carrossel de blocos
         description: Insira conteúdo num layout de carrossel
+    event: status
+    link: '{{ repoUrl }}/issues/9'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -224,21 +224,24 @@ steps:
         issue: 9
         data:
           nextIssue: '10'
-      - type: createIssue
+      - body: responsive.md
         title: Making your content responsive
-        body: responsive.md
+        type: createIssue
   - title: Making your content responsive
-    description: >-
-      Use responsive layout to adapt your content to different devices
-    event: status
-    link: '{{ repoUrl }}/issues/10'
+    description: Use responsive layout to adapt your content to different devices
     translations:
       es:
         title: Haciendo que su contenido sea responsivo
-        description: Use responsive layout para adaptar su contenido a diferentes dispositivos
+        description: >-
+          Use responsive layout para adaptar su contenido a diferentes
+          dispositivos
       pt:
         title: Tornando seu conteúdo responsivo
-        description: Use o responsive layout para adaptar seu conteúdo para diferentes dispositivos
+        description: >-
+          Use o responsive layout para adaptar seu conteúdo para diferentes
+          dispositivos
+    event: status
+    link: '{{ repoUrl }}/issues/10'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -249,13 +252,11 @@ steps:
         issue: 10
         data:
           nextIssue: '11'
-      - type: createIssue
+      - body: pdp.md
         title: Product page
-        body: pdp.md
+        type: createIssue
   - title: Product page
     description: First steps to creating a product details page
-    event: status
-    link: '{{ repoUrl }}/issues/11'
     translations:
       es:
         title: Página de producto
@@ -263,6 +264,8 @@ steps:
       pt:
         title: Página de produto
         description: Primeiros passsos para montar uma página de detalhes de produto
+    event: status
+    link: '{{ repoUrl }}/issues/11'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -273,13 +276,11 @@ steps:
         issue: 11
         data:
           nextIssue: '12'
-      - type: createIssue
+      - body: pdp2.md
         title: Evolving your product page (pdp)
-        body: pdp2.md
+        type: createIssue
   - title: Evolving your product page (pdp)
     description: Adding new blocks and making the page more interactive
-    event: status
-    link: '{{ repoUrl }}/issues/12'
     translations:
       es:
         title: Evolucionando su página de producto (pdp)
@@ -287,6 +288,8 @@ steps:
       pt:
         title: Evoluindo sua página de produto (pdp)
         description: Adicionando novos blocos e deixando a página mais interativa
+    event: status
+    link: '{{ repoUrl }}/issues/12'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -297,13 +300,11 @@ steps:
         issue: 12
         data:
           nextIssue: '13'
-      - type: createIssue
+      - body: pdp3.md
         title: Finishing your pdp
-        body: pdp3.md
+        type: createIssue
   - title: Finishing your pdp
     description: Using related products and editing properties
-    event: status
-    link: '{{ repoUrl }}/issues/13'
     translations:
       es:
         title: Finalizando su pdp
@@ -311,6 +312,8 @@ steps:
       pt:
         title: Finalizando sua pdp
         description: Usando produtos relacionados e alterando propriedades
+    event: status
+    link: '{{ repoUrl }}/issues/13'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -321,13 +324,11 @@ steps:
         issue: 13
         data:
           nextIssue: '14'
-      - type: createIssue
+      - body: search.md
         title: Search page
-        body: search.md
+        type: createIssue
   - title: Search page
     description: Getting to know a search page's blocks
-    event: status
-    link: '{{ repoUrl }}/issues/14'
     translations:
       es:
         title: Página de búsqueda
@@ -335,6 +336,8 @@ steps:
       pt:
         title: Página de busca
         description: Conhecendo os blocos de uma página de busca
+    event: status
+    link: '{{ repoUrl }}/issues/14'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -345,20 +348,20 @@ steps:
         issue: 14
         data:
           nextIssue: '15'
-      - type: createIssue
+      - body: search2.md
         title: Adjusting the search page's layout
-        body: search2.md
+        type: createIssue
   - title: Adjusting the search page's layout
     description: Adding lines and columns to improve the search layout
-    event: status
-    link: '{{ repoUrl }}/issues/15'
     translations:
       es:
-        title: Ajustando layout de página de búsqueda 
+        title: Ajustando layout de página de búsqueda
         description: Agregando líneas y columnas para mejorar el layout de búsqueda
       pt:
         title: Ajustando layout da página de busca
         description: Adicionando linhas e colunas para melhorar o layout da busca
+    event: status
+    link: '{{ repoUrl }}/issues/15'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -369,13 +372,11 @@ steps:
         issue: 15
         data:
           nextIssue: '16'
-      - type: createIssue
+      - body: styles.md
         title: Global styles
-        body: styles.md
+        type: createIssue
   - title: Global styles
     description: Editing semantic classes to change your store's style
-    event: status
-    link: '{{ repoUrl }}/issues/16'
     translations:
       es:
         title: Estilos globales
@@ -383,6 +384,8 @@ steps:
       pt:
         title: Estilos globais
         description: Altere classes semânticas para mudar o estilo da sua loja
+    event: status
+    link: '{{ repoUrl }}/issues/16'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -393,13 +396,11 @@ steps:
         issue: 16
         data:
           nextIssue: '17'
-      - type: createIssue
+      - body: custom-template.md
         title: Creating custom templates
-        body: template.md
+        type: createIssue
   - title: Creating custom templates
     description: Create a path and link a customized template
-    event: status
-    link: '{{ repoUrl }}/issues/17'
     translations:
       es:
         title: Creando templates personalizados
@@ -407,6 +408,8 @@ steps:
       pt:
         title: Criando templates customizados
         description: Crie uma rota e associe um template customizado
+    event: status
+    link: '{{ repoUrl }}/issues/17'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -417,20 +420,20 @@ steps:
         issue: 17
         data:
           nextIssue: '18'
-      - type: createIssue
+      - body: tab-layout.md
         title: Tab layout
-        body: tab-layout.md
+        type: createIssue
   - title: Tab layout
     description: Using tabs layout on the about us page
-    event: status
-    link: '{{ repoUrl }}/issues/18'
     translations:
       es:
-        title: Layout de pestañas 
+        title: Layout de pestañas
         description: Usando layout de pestañas en la página institucional
       pt:
         title: Layout de abas
         description: Usando layout de abas na página institucional
+    event: status
+    link: '{{ repoUrl }}/issues/18'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -441,13 +444,11 @@ steps:
         issue: 18
         data:
           nextIssue: '19'
-      - type: createIssue
+      - body: richtextmarkdown.md
         title: Exploring the power behind rich text
-        body: richtextmarkdown.md
+        type: createIssue
   - title: Exploring the power behind rich text
     description: Advanced Markdown usage
-    event: status
-    link: '{{ repoUrl }}/issues/19'
     translations:
       es:
         title: Explorando el poder de rich text
@@ -455,6 +456,8 @@ steps:
       pt:
         title: Explorando o poder do rich text
         description: Usando a linguagem do Markdown de forma avançada
+    event: status
+    link: '{{ repoUrl }}/issues/19'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -465,13 +468,11 @@ steps:
         issue: 19
         data:
           nextIssue: '20'
-      - type: createIssue
+      - body: iframe.md
         title: Inserting an Iframe on our about us page
-        body: iframe.md
+        type: createIssue
   - title: Inserting an Iframe on our about us page
     description: Displaying an Instagram post in your store
-    event: status
-    link: '{{ repoUrl }}/issues/20'
     translations:
       es:
         title: Insertando un Iframe en nuestra página institucional
@@ -479,6 +480,8 @@ steps:
       pt:
         title: Inserindo um Iframe na nossa página institucional
         description: Exibindo um post do Instagram na sua loja
+    event: status
+    link: '{{ repoUrl }}/issues/20'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -489,20 +492,20 @@ steps:
         issue: 20
         data:
           nextIssue: '21'
-      - type: createIssue
-        title: Building a custom search landing page 
-        body: landing.md
-  - title: Building a custom search landing page 
+      - body: landing.md
+        title: Building a custom search landing page
+        type: createIssue
+  - title: Building a custom search landing page
     description: Defining pages for events that have customized products
-    event: status
-    link: '{{ repoUrl }}/issues/21'
     translations:
       es:
-        title: Construyendo un landing personalizado de búsqueda 
+        title: Construyendo un landing personalizado de búsqueda
         description: Definiendo páginas de eventos con productos personalizados
       pt:
         title: Construindo uma landing customizada de busca
         description: Definindo páginas de eventos com produtos customizados
+    event: status
+    link: '{{ repoUrl }}/issues/21'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -513,13 +516,11 @@ steps:
         issue: 21
         data:
           nextIssue: '22'
-      - type: createIssue
+      - body: header.md
         title: Header
-        body: header.md
+        type: createIssue
   - title: Header
-    description: Defining header blocks and editing the iconography 
-    event: status
-    link: '{{ repoUrl }}/issues/22'
+    description: Defining header blocks and editing the iconography
     translations:
       es:
         title: Cabecera de la tienda
@@ -527,6 +528,8 @@ steps:
       pt:
         title: Cabeçalho da loja
         description: Definindo blocos de cabeçalho e alterando iconografia
+    event: status
+    link: '{{ repoUrl }}/issues/22'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -537,13 +540,11 @@ steps:
         issue: 22
         data:
           nextIssue: '23'
-      - type: createIssue
+      - body: menu.md
         title: Menu
-        body: menu.md
+        type: createIssue
   - title: Menu
     description: Creating your store's browsing
-    event: status
-    link: '{{ repoUrl }}/issues/23'
     translations:
       es:
         title: Menú
@@ -551,6 +552,8 @@ steps:
       pt:
         title: Menu
         description: Criando a navegação da sua loja
+    event: status
+    link: '{{ repoUrl }}/issues/23'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -561,13 +564,11 @@ steps:
         issue: 23
         data:
           nextIssue: '24'
-      - type: createIssue
+      - body: menu-flex.md
         title: Advanced menu with Flex Layout
-        body: menu-flex.md
+        type: createIssue
   - title: Advanced menu with Flex Layout
     description: Enriching the menu with additional blocks
-    event: status
-    link: '{{ repoUrl }}/issues/24'
     translations:
       es:
         title: Menú avanzado con Flex Layout
@@ -575,6 +576,8 @@ steps:
       pt:
         title: Menu avançado com flex layout
         description: Enriquecendo o menu com outros blocos
+    event: status
+    link: '{{ repoUrl }}/issues/24'
     actions:
       - type: gate
         left: '%payload.state%'
@@ -585,13 +588,11 @@ steps:
         issue: 24
         data:
           nextIssue: '25'
-      - type: createIssue
+      - body: footer.md
         title: Footer
-        body: footer.md
+        type: createIssue
   - title: Footer
     description: Defining footer blocks
-    event: status
-    link: '{{ repoUrl }}/issues/25'
     translations:
       es:
         title: Pie de Página
@@ -599,8 +600,12 @@ steps:
       pt:
         title: Rodapé
         description: Definindo blocos de rodapé
+    event: status
+    link: '{{ repoUrl }}/issues/25'
     actions:
       - type: gate
         left: '%payload.state%'
         operator: ===
         right: success
+      - type: respond
+        with: congrats_course.md
